@@ -1,0 +1,139 @@
+# snakemake --profile=cubi-v1 --jobs 60 -k --use-conda --restart-times=0
+# snakemake --cluster "sbatch -t 2-23:00:00 -p gpu -N 1 --gres=gpu:tesla:1 --mem-per-cpu=256GB" --cluster-config /etc/xdg/snakemake/cubi-v1/config.yaml --jobs 10
+# snakemake --dag | dot -Tpdf > dag.pdf
+
+import scanpy as sc
+import matplotlib.pyplot as pl
+import anndata as ad
+import pandas as pd
+import numpy as np
+import scvelo as scv
+import os
+import sys
+
+### PATHS ###
+import yaml
+with open('../config/config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+DIR = config['data_path']
+
+### RULES ###
+
+rule all:
+    input:
+        expand(DIR + 'Cov19Hamster_timecourse_integrated_{subset}.h5', 
+        subset=['all', 'endothelial', 'neutrophils'])
+
+subworkflow Gold_workflow:
+    workdir:
+        "sub_workflows/MesAur_timecourse"
+    snakefile:
+        "sub_workflows/MesAur_timecourse/Snakefile"
+
+subworkflow Dwarf_workflow:
+    workdir:
+        "sub_workflows/PhoRob_timecourse"
+    snakefile:
+        "sub_workflows/PhoRob_timecourse/Snakefile"
+
+rule integrate_hamsters:
+    input:
+        pr_timecourse = Dwarf_workflow(DIR + 'PhoRob_timecourse_{subset}.h5'),
+        ma_timecourse = Gold_workflow(DIR + 'MesAur_timecourse_{subset}.h5')
+    output:
+        DIR + 'Cov19Hamster_timecourse_integrated_{subset}.h5'
+    resources:
+        partititon='gpu',
+        nvidia_gpu=1,
+        mem='256G',
+        time='1-00:00:00',
+        mem_mb=256000,
+        disk_mb=256000
+    run:
+        import scvi
+        os.environ['SLURM_JOB_NAME'] = 'bash'  # https://github.com/PyTorchLightning/pytorch-lightning/issues/3651#issuecomment-796045752
+
+        # load and prepare data
+        adata = scv.read(input['pr_timecourse'])
+        adata.uns['name'] = 'Dwarfhamster'
+        adata.obs['organism'] = 'Dwarfhamster'
+        adata.obs['dosage'] = ['high dose' if 'hd' in x else 'low dose' if 'ld' in x else 'no dose' for x in adata.obs['orig.ident']]
+        adata.obs['time'] = [x.split('_')[-1] for x in adata.obs.timepoint]
+        adata.obs['hamster'] = [x+'_pr' for x in adata.obs.hamster]
+
+        bdata = scv.read(input['ma_timecourse'])
+        bdata.uns['name'] = 'Goldhamster'
+        bdata.obs['organism'] = 'Goldhamster'
+        bdata.obs['dosage'] = ['no dose' if x=='d0' else 'high dose' for x in bdata.obs['timepoint']]  # high dose
+        bdata.obs['time'] = [x.upper() for x in bdata.obs.timepoint]
+        bdata.obs['timepoint'] = ['hd_'+x if x!='D0' else x for x in bdata.obs.time]
+        bdata.obs['hamster'] = [x+'_ma' for x in bdata.obs.hamster]
+
+        # concat data and define features
+        print('Concating data...')
+        adatas = [adata, bdata]
+        superdata = sc.concat({adata.uns['name']: adata for adata in adatas}, label='batch', index_unique='-', join='outer')
+        sc.pp.highly_variable_genes(superdata, flavor='seurat_v3', subset=False, n_top_genes=2000, batch_key='batch', layer='counts')
+        subdata = superdata[:, superdata.var.highly_variable].copy()
+
+        print('Running scVI for '+wildcards.subset+' ...')
+        # Prepare data for scVI, define covariates to remove
+        scvi.model.SCVI.setup_anndata(subdata, layer='counts', batch_key="batch",
+                              categorical_covariate_keys=None,
+                              continuous_covariate_keys=None)
+        # Setup and train model (if needed)
+        model = scvi.model.SCVI(subdata, n_layers=2, n_latent=30)
+        model.train(max_epochs=200,#4000,
+                    train_size=0.9, validation_size=0.05,
+                    early_stopping=True, use_gpu=True)
+        print('Finished training')
+        # save resulting model
+        model.save('../models/Gold_Dwarf_timecourse_scvi_snake_'+ wildcards.subset, overwrite=True)
+        # plot loss
+        pl.plot(model.history['train_loss_epoch'])
+        pl.xlabel('epochs')
+        pl.ylabel('training loss')
+        pl.grid(True)
+        pl.savefig('../models/Gold_Dwarf_timecourse_scvi_snake_'+ wildcards.subset+'/loss_plot.pdf', bbox_inches='tight')
+        pl.close()
+        # build scVI embedding
+        latent = model.get_latent_representation(subdata)
+        superdata.obsm["X_scVI"] = latent
+        sc.pp.neighbors(superdata, use_rep="X_scVI", key_added='neighbors_scVI')
+        sc.tl.louvain(superdata, neighbors_key='neighbors_scVI', key_added='louvain_scVI')
+        sc.tl.umap(superdata, min_dist=0.3, neighbors_key='neighbors_scVI')
+        superdata.obsm['X_umap_scVI'] = superdata.obsm['X_umap']
+
+        # harmony
+        print('Running harmony...')
+        sc.pp.pca(subdata)  # always run pca before you do harmony
+        sc.external.pp.harmony_integrate(subdata, key='batch')
+        superdata.obsm['X_pca_harmony'] = subdata.obsm['X_pca_harmony']
+        sc.pp.neighbors(superdata, use_rep="X_pca_harmony", key_added='neighbors_harmony')
+        sc.tl.louvain(superdata, neighbors_key='neighbors_harmony', key_added='louvain_harmony')
+        sc.tl.umap(superdata, min_dist=0.3, neighbors_key='neighbors_harmony')
+        superdata.obsm['X_umap_harmony'] = superdata.obsm['X_umap']
+
+        # without integration
+        print('Raw embedding...')
+        sc.pp.pca(superdata, use_highly_variable=True)
+        sc.pp.neighbors(superdata)
+        sc.tl.umap(superdata)
+        superdata.obsm['X_umap_no_integration'] = superdata.obsm['X_umap']
+
+        # set colors
+        print('Setting colors...')
+        from matplotlib.cm import get_cmap
+        superdata.uns['dosage_colors'] = ['tab:red', 'tab:blue', 'tab:grey']  # high, low, no dose
+        superdata.uns['timepoint_colors'] = ['tab:grey', *get_cmap('Reds')(np.linspace(0.2,1,4)), *get_cmap('Blues')(np.linspace(0.2,1,4))]  # D0, hd D2/3/5/E14, ld D2/D3
+        superdata.uns['time_colors'] = get_cmap('viridis')(np.linspace(0,1,5)) # D0, D2, D3, D5, e14
+        superdata.uns['batch_colors'] = ['tab:green', 'tab:orange']
+        superdata.uns['organism_colors'] = ['tab:green', 'tab:orange']
+        hamster_colors = [None]*(6)
+        hamster_colors[::2] = get_cmap('Oranges')(np.linspace(0.2,0.8,3))
+        hamster_colors[1::2] = get_cmap('Greens')(np.linspace(0.2,0.8,3))
+        superdata.uns['hamster_colors'] = hamster_colors
+
+        # save integrated superdata
+        print('Writing superdata object...')
+        superdata.write(output[0])

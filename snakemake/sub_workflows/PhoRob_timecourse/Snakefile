@@ -1,0 +1,221 @@
+# snakemake --profile=cubi-v1 --jobs 60 -k --use-conda
+# snakemake --forceall --dag | dot -Tpdf > snake_dag.pdf
+# snakemake --forceall --rulegraph | dot -Tpdf > snake_rulegraph.pdf
+
+import pandas as pd
+import numpy as np
+import os
+import sys
+
+### PATHS ###
+import yaml
+with open('../../../config/config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+DIR = config['data_path']
+# data directory on scratch
+DIR = config['tmp_path']
+# data directory on work
+WDIR = config['data_path']
+# local utils
+sys.path.insert(1, '../utils/')
+from utils import *
+# Genome annotation paths, please supply the Dwarf hamster gtf path here!
+GAP = "/fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/refdata-cellranger-pr1_fixed_names_filtered_complete_fixed_unknown_ext_rev3_S2/"
+GTF = GAP+"genes/genes.gtf"
+
+import yaml
+with open('snake_config.yml') as f:
+	snake_config = yaml.safe_load(f)
+LIBRARIES = snake_config['libraries']
+
+rule all:
+	input:
+		[WDIR+'PhoRob_timecourse_'+subset+'.h5' for subset in ['all', 'endothelial', 'neutrophils']],
+
+
+rule prepare_and_merge:
+	input:
+		pca=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_pca.csv',
+		umap=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_umap.csv',
+		metadata=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_metadata.csv',
+		endo_annot=WDIR+'rds_files/pr_seu_endo_seurat_metadata.csv',
+		samples_cellranger=expand(WDIR+"count_data/cellranger_{lib}/outs/filtered_feature_bc_matrix.h5", lib=LIBRARIES)
+	output:
+		WDIR+'PhoRob_timecourse_all.h5',
+		WDIR+'PhoRob_timecourse_endothelial.h5',
+		WDIR+'PhoRob_timecourse_neutrophils.h5',
+	resources:
+		mem='128G',
+		time='2-23:00:00',
+		disk_mb=128000,
+		mem_mb=128000
+	run:
+		import scanpy as sc
+		import anndata as ad
+		import scvelo as scv
+		import seaborn as sns
+		import scrublet as scr
+
+		# from seurat
+		pca = pd.read_csv(input['pca'], index_col=0)
+		umap = pd.read_csv(input['umap'], index_col=0)
+		metadata = pd.read_csv(input['metadata'], index_col=0)
+
+		def get_run(lib_cr, lib_velo):
+			adata = sc.read_10x_h5(lib_cr)
+			adata.var_names_make_unique()
+
+			sample_id_part = lib_velo.split('cellranger_')[1].split('/velocyto')[0].replace('-', '_')
+			print(sample_id_part)
+			adata.obs_names = [sample_id_part+'_L_'+x for x in adata.obs_names]
+			adata.obsm['X_pca_seurat'] = pd.merge(adata.obs, pca, how='left', left_index=True, right_index=True).values
+			# TODO: umap rework! Is in metadata. Also check if pca is fine.
+			adata.obsm['X_umap_seurat'] = pd.merge(adata.obs, umap, how='left', left_index=True, right_index=True).values
+			adata.obs = pd.merge(adata.obs, metadata, how='left', left_index=True, right_index=True)
+
+			# subset to Emanuels filtering
+			adata = adata[~pd.isna(adata.obs['UMAP_1'])].copy()
+			assert adata.n_obs != 0
+			return adata
+
+		print('Loading data...')
+		adatas = [get_run(lib_cr, lib_velo) for lib_cr, lib_velo in zip(input['samples_cellranger'], input["samples_velocyto"])]
+		print('Concating adatas...')
+		adata = ad.concat(adatas)
+
+		# add finer endo annotation
+		pr_tab = pd.read_csv(input['endo_annot'], index_col=0)
+		is_found = np.isin(pr_tab.index, adata.obs_names)
+		print(f'{np.sum(~is_found)} endo cells were found in annotation file but not in count object.')
+		pr_tab = pr_tab[is_found]
+		adata.obs.celltype = adata.obs.celltype.astype(str)
+		adata.obs.loc[pr_tab['celltype'].index, 'celltype'] = pr_tab['celltype']
+
+		# convenience annotations
+		adata.obs['organism'] = 'Dwarfhamster'
+		adata.obs['dosage'] = ['high dose' if 'hd' in x else 'low dose' if 'ld' in x else 'no dose' for x in adata.obs['orig.ident']]
+		adata.obs['time'] = [x.split('_')[-1] for x in adata.obs.timepoint]
+		adata.obs['organism_time'] = [o+'_'+t for o, t in zip(adata.obs['organism'], adata.obs['time'])]
+		adata.obs['organism_dosage'] = [o+'_'+d for o, d in zip(adata.obs['organism'], adata.obs['dosage'])]
+		adata.obs['organism_dosage_time'] = [o+'_'+d+'_'+t for o, d, t in zip(adata.obs['organism'], adata.obs['dosage'], adata.obs['time'])]
+		adata.obs['SCoV2_detected'] = adata.obs['SCoV2_sum'] > 0
+		adata.obs['time_num'] = [int(x[1:]) for x in adata.obs.time]
+		adata.obs['replicate'] = [x[2] for x in adata.obs.hamster]
+
+		# colors
+		adata.uns['timepoint_colors'] = ['tab:grey', 'lightblue', 'tab:blue', 'lightcoral', 'tab:red']  # D0, hd D2, hd D3, ld D2, ld D3
+		adata.uns['organism_time_colors'] = list(get_cmap('Greens')([0.2,0.5,0.8])) + list(get_cmap('Oranges')([0.2,0.5,0.7, 0.9])) + ['black']
+		adata.uns['organism_dosage_colors'] = list(get_cmap('Greens')([0.8,0.5,0.1])) + list(get_cmap('Oranges')([0.8,0.1]))
+		adata.uns['time_colors'] = ['tab:grey', 'lightgreen', 'green']  # D0, D2, D3
+		adata.uns['dosage_colors'] = ['tab:red', 'tab:blue', 'grey']  # high, low, no dose color
+
+		# norm and log, we do not scale
+		adata.layers['counts'] = adata.X.copy()
+		sc.pp.normalize_total(adata)
+		sc.pp.log1p(adata)
+
+		# doublets
+		sample_key = 'orig.ident'
+		obs_key = 'celltype'
+		parent_cells = infer_doublets_and_parents(adata, sample_key=sample_key, layer='counts')
+		tab = count_parent_obs(adata, parent_cells, obs_key=obs_key)
+		tab = tab[[k for k in tab.columns if 'mixed' not in k]]  # mixed is not a valid parent
+		tab_n = normalize_tab(tab)
+		observed, doublets_types = assign_doublets(tab_n, threshold=0.2, symmetric=False)
+		add_doublet_type_annotation(adata, doublets_types, tab, obs_key=obs_key, key='doublet_types')
+		adata.obs['doublet_types'].to_csv(output[5])
+
+		def prepare_embeddings(adata):
+			bdata = adata.copy()
+			# Seurat-pca based embeddings (aka "integrated")
+			sc.pp.neighbors(bdata, use_rep='X_pca_seurat')
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_seurat_based'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_seurat_based'] = bdata.obsm['X_diffmap']
+
+			# own embedding without integration ("vanilla")
+			sc.pp.highly_variable_genes(bdata, n_top_genes=2000)
+			sc.pp.pca(bdata, use_highly_variable=True)
+			sc.pp.neighbors(bdata)
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_vanilla'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_vanilla'] = bdata.obsm['X_diffmap']
+			del bdata.obsm['X_umap']
+			del bdata.obsm['X_diffmap']
+			return bdata
+
+		print('Writing total...')
+		# Complete set
+		prepare_embeddings(adata).write(output[0])
+
+		print('Writing subsets...')
+		# Celltype subsets
+		prepare_embeddings(adata[np.isin(adata.obs.celltype,
+		['Bronchial', 'Lymphatic', 'Capillary', 'Vein', 'Artery'])].copy()).write(output[1])
+		prepare_embeddings(adata[np.isin(adata.obs.celltype, ['Neutrophils', 'mixed2'])].copy()).write(output[2])
+
+rule R_extract:
+	input:
+		WDIR+'rds_files/{rds_file}.rds'
+	output:
+		WDIR+'seurat_exports/{rds_file}_seurat_pca.csv',
+		WDIR+'seurat_exports/{rds_file}_seurat_umap.csv',
+		WDIR+'seurat_exports/{rds_file}_seurat_metadata.csv'
+	resources:
+		mem='128G',
+		time='02:00:00'
+	conda:
+		"seurat_env"
+	shell:
+		'''
+		cd {WDIR}
+		Rscript --vanilla {UTILS}/extract.R -f rds_files/{wildcards.rds_file}.rds
+		mkdir -p seurat_exports/
+		mv seurat_pca.csv seurat_exports/{wildcards.rds_file}_seurat_pca.csv
+		mv seurat_umap.csv seurat_exports/{wildcards.rds_file}_seurat_umap.csv
+		mv seurat_metadata.csv seurat_exports/{wildcards.rds_file}_seurat_metadata.csv
+		'''
+
+rule gzip:
+	input: "{i}"
+	output: "{i}.gz"
+	resources:
+		mem='128G',
+		time='2-23:00:00'
+	shell:
+		 "gzip {input}"
+
+rule cellranger_count:
+	input:
+		fastqR1=DIR+ "{run}-L_S1_L001_R1_001.fastq",
+		fastqR2=DIR+ "{run}-L_S1_L001_R2_001.fastq",
+		transcriptome=GAP
+	output:
+		cellranger_h5=WDIR+"count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5",
+		bam=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam",
+		bai=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam.bai"
+	resources:
+		mem='128G',
+		time='2-23:00:00'
+	log: DIR+"snakemake/log/{run}_count.log"
+	threads: 12
+	shell:
+		'''
+		cd {DIR}
+		mkdir -p count_data/
+		cd count_data/
+		rm -fr cellranger_{wildcards.run}/  # https://twitter.com/johanneskoester/status/1059532816537522176?lang=en
+		cellranger count \
+		--id=cellranger_{wildcards.run} \
+		--fastqs={DIR} \
+		--sample={wildcards.run}-L \
+		--transcriptome={input.transcriptome} \
+		--localmem=30 \
+		--localcores=12 > {log}
+
+		# copy count matrix to WDIR, bam stays on scratch
+		mkdir -p {WDIR}count_data/cellranger_{wildcards.run}/outs/
+		cp {DIR}count_data/cellranger_{wildcards.run}/outs/*.h5 {WDIR}count_data/cellranger_{wildcards.run}/outs/
+		'''

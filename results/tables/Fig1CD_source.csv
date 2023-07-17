@@ -1,0 +1,142 @@
+dataset,group,celltype,celltype_freq
+Goldhamster,E14,B cells,0.12997437715754137
+Goldhamster,E14,DCs,0.014709022829902841
+Goldhamster,E14,Endothelial cells,0.16023598970822286
+Goldhamster,E14,Epithelial cells,0.12594786908245129
+Goldhamster,E14,Macrophages,0.2903013892291771
+Goldhamster,E14,Neutrophils,0.06222496119196022
+Goldhamster,E14,Other,0.06506382822369632
+Goldhamster,E14,T/NK cells,0.151542562577048
+Goldhamster,D5,B cells,0.06764868619178649
+Goldhamster,D5,DCs,0.03602601573726242
+Goldhamster,D5,Endothelial cells,0.10441050046559013
+Goldhamster,D5,Epithelial cells,0.057566000931676874
+Goldhamster,D5,Macrophages,0.37247097230895787
+Goldhamster,D5,Neutrophils,0.09848743087875467
+Goldhamster,D5,Other,0.03476152984831693
+Goldhamster,D5,T/NK cells,0.22862886363765464
+Goldhamster,D3,B cells,0.1207169176720373
+Goldhamster,D3,DCs,0.015996101499199885
+Goldhamster,D3,Endothelial cells,0.11201117862801561
+Goldhamster,D3,Epithelial cells,0.08689289906389135
+Goldhamster,D3,Macrophages,0.3307975902632525
+Goldhamster,D3,Neutrophils,0.08225637900402138
+Goldhamster,D3,Other,0.07070883199133526
+Goldhamster,D3,T/NK cells,0.18062010187824673
+Goldhamster,D2,B cells,0.099585561266474
+Goldhamster,D2,DCs,0.009572416552867434
+Goldhamster,D2,Endothelial cells,0.16430601939012432
+Goldhamster,D2,Epithelial cells,0.08355717388825602
+Goldhamster,D2,Macrophages,0.278443658809658
+Goldhamster,D2,Neutrophils,0.17212632139647285
+Goldhamster,D2,Other,0.0817752139682439
+Goldhamster,D2,T/NK cells,0.11063363472790344
+Goldhamster,D0,B cells,0.09700038922009208
+Goldhamster,D0,DCs,0.008726802401742707
+Goldhamster,D0,Endothelial cells,0.19736086643080988
+Goldhamster,D0,Epithelial cells,0.12032099268706853
+Goldhamster,D0,Macrophages,0.2642669698108668
+Goldhamster,D0,Neutrophils,0.09349811503761814
+Goldhamster,D0,Other,0.07226864695983243
+Goldhamster,D0,T/NK cells,0.14655721745196945
+Dwarfhamster_ld,D3,B cells,0.2295547777977557
+Dwarfhamster_ld,D3,DCs,0.015636034733398328
+Dwarfhamster_ld,D3,Endothelial cells,0.19112427586551464
+Dwarfhamster_ld,D3,Epithelial cells,0.06963457689351388
+Dwarfhamster_ld,D3,Macrophages,0.16879773222683028
+Dwarfhamster_ld,D3,Neutrophils,0.09483306346491671
+Dwarfhamster_ld,D3,Other,0.05221994491279597
+Dwarfhamster_ld,D3,T/NK cells,0.17819959410527444
+Dwarfhamster_ld,D2,B cells,0.2100598263701475
+Dwarfhamster_ld,D2,DCs,0.010490738788729805
+Dwarfhamster_ld,D2,Endothelial cells,0.14435293889407785
+Dwarfhamster_ld,D2,Epithelial cells,0.04515748452485561
+Dwarfhamster_ld,D2,Macrophages,0.1534899249425452
+Dwarfhamster_ld,D2,Neutrophils,0.15000511407367428
+Dwarfhamster_ld,D2,Other,0.06284983297524854
+Dwarfhamster_ld,D2,T/NK cells,0.22359413943072118
+Dwarfhamster_ld,D0,B cells,0.2678889746739473
+Dwarfhamster_ld,D0,DCs,0.007332605285604009
+Dwarfhamster_ld,D0,Endothelial cells,0.1782351607404151
+Dwarfhamster_ld,D0,Epithelial cells,0.06370932110260806
+Dwarfhamster_ld,D0,Macrophages,0.16674614857522005
+Dwarfhamster_ld,D0,Neutrophils,0.028001998805098863
+Dwarfhamster_ld,D0,Other,0.07380019898691553
+Dwarfhamster_ld,D0,T/NK cells,0.21428559183019114
+Dwarfhamster_hd,D3,B cells,0.17417749661997758
+Dwarfhamster_hd,D3,DCs,0.020783731033008256
+Dwarfhamster_hd,D3,Endothelial cells,0.16811148369398066
+Dwarfhamster_hd,D3,Epithelial cells,0.03203446434196108
+Dwarfhamster_hd,D3,Macrophages,0.17509842195778105
+Dwarfhamster_hd,D3,Neutrophils,0.20919175594709818
+Dwarfhamster_hd,D3,Other,0.08353825667261651
+Dwarfhamster_hd,D3,T/NK cells,0.13706438973357668
+Dwarfhamster_hd,D2,B cells,0.06780933216127734
+Dwarfhamster_hd,D2,DCs,0.03018176225823881
+Dwarfhamster_hd,D2,Endothelial cells,0.2831240449071743
+Dwarfhamster_hd,D2,Epithelial cells,0.04756009030983221
+Dwarfhamster_hd,D2,Macrophages,0.18614236591448466
+Dwarfhamster_hd,D2,Neutrophils,0.22583811062470352
+Dwarfhamster_hd,D2,Other,0.05523612018337067
+Dwarfhamster_hd,D2,T/NK cells,0.10410817364091851
+Dwarfhamster_hd,D0,B cells,0.2678889746739473
+Dwarfhamster_hd,D0,DCs,0.007332605285604009
+Dwarfhamster_hd,D0,Endothelial cells,0.1782351607404151
+Dwarfhamster_hd,D0,Epithelial cells,0.06370932110260806
+Dwarfhamster_hd,D0,Macrophages,0.16674614857522005
+Dwarfhamster_hd,D0,Neutrophils,0.028001998805098863
+Dwarfhamster_hd,D0,Other,0.07380019898691553
+Dwarfhamster_hd,D0,T/NK cells,0.21428559183019114
+Chua_NS,critical,B cells,0.03128715095243432
+Chua_NS,critical,DCs,0.017942681960373547
+Chua_NS,critical,Epithelial cells,0.5064124500686759
+Chua_NS,critical,Macrophages,0.12394495510815859
+Chua_NS,critical,Neutrophils,0.24405185241326308
+Chua_NS,critical,Other,0.0033087030097230857
+Chua_NS,critical,T/NK cells,0.09929161812791933
+Chua_NS,moderate,B cells,0.0390070755602832
+Chua_NS,moderate,DCs,0.08428525256762529
+Chua_NS,moderate,Epithelial cells,0.48497377169680506
+Chua_NS,moderate,Macrophages,0.13792243481945216
+Chua_NS,moderate,Neutrophils,0.11684004953786219
+Chua_NS,moderate,Other,0.0017491976624403453
+Chua_NS,moderate,T/NK cells,0.14672898373306512
+Chua_NS,control,B cells,0.014449931484578224
+Chua_NS,control,DCs,0.003476818948965688
+Chua_NS,control,Epithelial cells,0.9212311157662583
+Chua_NS,control,Macrophages,0.01928543195395809
+Chua_NS,control,Neutrophils,0.0009057971014492754
+Chua_NS,control,Other,0.00933994391025641
+Chua_NS,control,T/NK cells,0.04481026503526476
+Liao,severe,B cells,0.003670780591826244
+Liao,severe,DCs,0.00894716500876138
+Liao,severe,Epithelial cells,0.09810499507151259
+Liao,severe,Macrophages,0.5338662428683728
+Liao,severe,Neutrophils,0.04847171169387377
+Liao,severe,Other,0.17222048923757563
+Liao,severe,T/NK cells,0.13471861552807754
+Liao,mild,B cells,0.010201305101641113
+Liao,mild,DCs,0.031373997853599546
+Liao,mild,Epithelial cells,0.03826159670779881
+Liao,mild,Macrophages,0.41313184909360917
+Liao,mild,Neutrophils,0.0008561138146418969
+Liao,mild,Other,0.18996021837315694
+Liao,mild,T/NK cells,0.3162149190555525
+Liao,control,B cells,0.0013475161161429312
+Liao,control,DCs,0.02052480738796246
+Liao,control,Epithelial cells,0.002627555179275478
+Liao,control,Macrophages,0.7399808502079201
+Liao,control,Other,0.19517463719043995
+Liao,control,T/NK cells,0.04034463391825893
+Melms,critical,B cells,0.008291682108369324
+Melms,critical,Endothelial cells,0.04097073960981491
+Melms,critical,Epithelial cells,0.19439556328007493
+Melms,critical,Macrophages,0.3126530516974789
+Melms,critical,Other,0.307798002057191
+Melms,critical,T/NK cells,0.13589096124707092
+Melms,control,B cells,0.02383227914765171
+Melms,control,Endothelial cells,0.05457634652520108
+Melms,control,Epithelial cells,0.47598337386499007
+Melms,control,Macrophages,0.12398862797279366
+Melms,control,Other,0.19082623718143502
+Melms,control,T/NK cells,0.1307931353079285
