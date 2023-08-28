@@ -8,5 +8,5 @@
 - First, go into the snakemaker folder and run the following command to run the snakemake pipeline:
 `snakemake --jobs 10 -k --use-conda `. Make sure to allocate a gpu since we use scVI for integration.
 
-### Citation
-WIP
+### Associated Manuscript
+Preprint on bioRxiv: https://doi.org/10.1101/2023.08.25.551434
