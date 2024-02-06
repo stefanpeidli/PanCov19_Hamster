@@ -1,6 +1,6 @@
-data_path: /fast/work/projects/bluethgen_landthaler/Cov19_Hamster/data/
-tmp_path: /fast/scratch/users/peidlis_c/
-Gold_gtf: /fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/MesAurJ_rev3_ext_S2
+data_path: /Users/peidli/work/data/COVID #/fast/work/projects/bluethgen_landthaler/Cov19_Hamster/data/
+tmp_path: /Users/peidli/work/temp #/fast/scratch/users/peidlis_c/
+# Gold_gtf: /fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/MesAurJ_rev3_ext_S2
 celltype_colors:
   AlveolarMacrophages: '#DEABC0'
   InterstitialMacrophages: '#B87BA0'

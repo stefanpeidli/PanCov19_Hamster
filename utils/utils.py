@@ -140,7 +140,7 @@ def specify_genes(genes, source_species='mouse', target_species='human'):
     """Translates gene symbols from a species to another using orthologs."""
     genes = genes if isinstance(genes, list) else list(genes) if (isinstance(genes, np.ndarray) or isinstance(genes, pd.Index)) else [genes]
     # load human-mouse orthology
-    tab = pd.read_csv(os.path.dirname(os.path.realpath(__file__))+'/resources/human_mouse_orthology/HMD_HumanPhenotype.rpt', sep='\t',
+    tab = pd.read_csv(os.path.dirname(os.path.realpath(__file__))+'/../resources/homology_human_mouse/HMD_HumanPhenotype.rpt', sep='\t',
                   names=['human', 'human_gene_number (HGNC)', 'mouse', 'mouse_gene_number (MGI)', 'mouse protein'], usecols=[0,1,2,3,4])
     human_mouse_orthology_dict = dict(zip(tab.human, tab.mouse))
     mouse_human_orthology_dict = {key: value for (value, key) in human_mouse_orthology_dict.items()}
