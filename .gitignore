@@ -16,7 +16,7 @@ colData.csv
 cellphonedb/
 */EGA/metadata/barcodes_*.csv
 */EGA/metadata/seurat_*.csv
-.DS_Store
+*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
