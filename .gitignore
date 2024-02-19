@@ -17,6 +17,7 @@ cellphonedb/
 */EGA/metadata/barcodes_*.csv
 */EGA/metadata/seurat_*.csv
 *.DS_Store
+utils/__pycache__/utils.cpython-39.pyc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
