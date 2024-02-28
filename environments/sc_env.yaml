@@ -1,0 +1,31 @@
+name: sc_env
+
+channels:
+ - conda-forge
+ - bioconda
+ - defaults
+
+dependencies:
+  - bioconda::scanpy~=1.9 #1.9.1
+  - bioconda::scvelo~=0.2 #0.2.4
+  - bioconda::scvi-tools~=0.17 #0.17.4, with pytorch 1.12.1
+  - bioconda::mygene~=3.2 #3.2.2
+  - bioconda::snakemake~=7.12 #7.12.1
+  - bioconda::scrublet~=0.2 #0.2.3
+  - conda-forge::tqdm
+  - conda-forge::notebook
+  - conda-forge::seaborn~=0.11 #0.11.2
+  - python~=3.9 #3.9.13
+  - numpy~=1.23 #1.23.1
+  - matplotlib~=3.5 # 3.5.3
+  - pandas~=1.4 #1.4.3
+  - pyyaml~=5.4 #5.4.1
+  - conda-forge::mscorefonts # provides standard fonts for plotting
+  - pip:
+     - scipy=1.9
+     - louvain
+     - leiden
+    #  - statannotations=0.4.4
+    #  - "--editable=git+https://github.com/saezlab/decoupler-py"  # last used version: 1.1.0
+    #  - "--editable=git+git://github.com/zqfang/gseapy.git#egg=gseapy"  # last used version: 0.10.8
+    #  - omnipath=1.0.5

@@ -1,0 +1,23 @@
+name: gpu_env
+channels:
+  - pytorch
+  - nvidea
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9           # Choose your desired Python version
+  - pytorch               # Installs the latest version of PyTorch with CUDA support
+  - torchvision          # Provides datasets, model architectures, and image transformations for PyTorch
+  - torchaudio            # Provides audio datasets and processing functions for PyTorch
+  - cudatoolkit=11.7   # Specify the version of CUDA Toolkit compatible with your GPU
+  - conda-forge::cudatoolkit-dev # gives tool nvcc
+# conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+# conda install jax jaxlib -c conda-forge
+# conda install scvi-tools -c conda-forge
+# import torch
+# torch.cuda.is_available()
+# torch.cuda.device_count()
+# torch.cuda.current_device()
+# torch.cuda.device(0)
+# torch.cuda.get_device_name(0)
+

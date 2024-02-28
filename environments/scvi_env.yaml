@@ -1,0 +1,27 @@
+name: scvi_env
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python~=3.9
+  - conda-forge::scanpy~=1.9
+  - conda-forge::scvi-tools
+  - bioconda::harmonypy
+  - conda-forge::numpy
+  - conda-forge::matplotlib
+  - conda-forge::pandas
+  - conda-forge::cudatoolkit-dev # gives tool nvcc
+  - conda-forge::cudatoolkit # do I even need it then?
+  - pytorch::pytorch # makes sure pytorch is GPU
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  # - pytorch::pytorch-cuda
+  - conda-forge::jax
+  - conda-forge::jaxlib
+  - conda-forge::leidenalg
+  - conda-forge::gputil

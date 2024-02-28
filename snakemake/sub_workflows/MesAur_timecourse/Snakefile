@@ -1,51 +1,118 @@
-# run as: snakemake --profile=cubi-v1 --jobs 60 -k --use-conda
+"""
+Author: Stefan Peidli
+Aim: Snakemake workflow for scperturb analysis.
+Date: 19.02.2024
+Run: snakemake
+DAG: snakemake --forceall --dag | dot -Tpdf > snake_dag.pdf
+Rulegraph: snakemake --forceall --rulegraph | dot -Tpdf > snake_rulegraph.pdf
+Description: This workflow produces 'MesAur_timecourse_{subset}.h5', merged 
+	Goldhamster data by the following steps:
+	- Download GEO data (SRA)
+	- Convert SRA to fastq
+	- Run cellranger count
+	- Merge cellranger count data
+	- Annotate with metadata
+"""
+import yaml
+import os
+import sys
+from pathlib import Path
 
 import pandas as pd
 import numpy as np
-import os
-import sys
+from snakemake.utils import min_version
 
-runs = pd.read_csv('info/SRR_Acc_List_lung.txt', index_col=0)  # exported this manually from run selector in GEO
-runs = list(runs.index)
+### CONFIGURATION ###
+min_version("6.4.1")  # set minimum snakemake version
+report: "report/workflow.rst"
+configfile: "../../../configuration/config.yaml"
 
-### PATHS ###
-import yaml
-with open('../../../config/config.yaml', 'r') as file:
-    config = yaml.safe_load(file)
+runs = list(pd.read_csv('info/SRR_Acc_List_lung.txt', index_col=0).index)  # exported this manually from run selector in GEO
+
 # data directory on scratch
-TEMPDIR = config['tmp_path']
+TEMPDIR = Path(config['tmp_path'])
 # data directory on work
-DIR = config['data_path']
-Gold_gtf = config['Gold_gtf']
+DIR = Path(config['data_path'])
+# path to Goldhamster genome
+Gold_gtf = Path(config['Gold_gtf'])
+
 # local utils
 sys.path.insert(1, '../../../utils/')
 from utils import *
 
+### RULES ###
 rule all:
 	input:
-		[DIR+'MesAur_timecourse_'+subset+'.h5' for subset in ['all', 'endothelial', 'neutrophils']]
+		expand(DIR / 'MesAur_timecourse_{subset}.h5', subset=['endothelial', 'neutrophils', 'tcells', 'macrophages'])
+
+rule extract_celltype:
+	input:
+		DIR / 'MesAur_timecourse.h5'
+	output:
+		DIR / 'MesAur_timecourse_{subset}.h5'
+	resources:
+		time='01:00:00',
+		mem_mb=32000,
+		disk_mb=32000
+	run:
+		import scanpy as sc
+		adata = sc.read_h5ad(input[0])
+
+		if wildcards.subset == 'endothelial':
+			mask = np.isin(adata.obs.celltype, ['Bronchial', 'Lymphatic', 'Capillary', 'Vein', 'Artery'])
+		elif wildcards.subset == 'neutrophils':
+			mask = np.isin(adata.obs.celltype, ['Neutrophils', 'mixed2'])
+		elif wildcards.subset == 'tcells':
+			mask = np.isin(adata.obs.celltype, ['TNKcells'])
+		elif wildcards.subset == 'macrophages':
+			mask = np.isin(adata.obs.celltype, ['Treml4+Macrophages', 'MonocyticMacrophages', 'InterstitialMacrophages', 'AlveolarMacrophages'])
+		else:
+			raise ValueError('Unknown subset')
+		adata = adata[mask].copy()
+
+		def prepare_embeddings(adata):
+			bdata = adata.copy()
+			# Seurat-pca based embeddings (aka "integrated")
+			sc.pp.neighbors(bdata, use_rep='X_pca_seurat')
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_seurat_based'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_seurat_based'] = bdata.obsm['X_diffmap']
+
+			# own embedding without integration ("vanilla")
+			sc.pp.highly_variable_genes(bdata, n_top_genes=2000)
+			sc.pp.pca(bdata, use_highly_variable=True)
+			sc.pp.neighbors(bdata)
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_vanilla'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_vanilla'] = bdata.obsm['X_diffmap']
+			del bdata.obsm['X_umap']
+			del bdata.obsm['X_diffmap']
+			return bdata
+		
+		prepare_embeddings(adata).write(output[0])
 
 rule prepare_and_merge:
 	input:
-		pca=DIR+'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_pca.csv',
-		umap=DIR+'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_umap.csv',
-		metadata=DIR+'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_metadata.csv',
-		endo_annot=DIR+'rds_files/ma_seu_endo_seurat_metadata.csv',
-		runs_=expand(DIR+"count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5", run=runs)
+		pca=DIR / 'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_pca.csv',
+		umap=DIR / 'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_umap.csv',
+		metadata=DIR / 'seurat_exports/seu_lung_new_combined_integrated_annotated_seurat_metadata.csv',
+		endo_annot=DIR / 'rds_files/ma_seu_endo_seurat_metadata.csv',
+		runs_=expand(DIR / "count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5", run=runs)
 	output:
-		DIR+'MesAur_timecourse_all.h5',
-		DIR+'MesAur_timecourse_endothelial.h5',
-		DIR+'MesAur_timecourse_neutrophils.h5',
+		DIR / 'MesAur_timecourse_all.h5'
 	resources:
-		mem='128G',
 		time='2-23:00:00',
+		mem_mb='128000',
 		disk_mb=128000
 	run:
 		import scanpy as sc
 		import anndata as ad
 		import scvelo as scv
 		import scrublet as scr
-		# from seurat
+
+		# From seurat
 		pca = pd.read_csv(input['pca'], index_col=0)
 		umap = pd.read_csv(input['umap'], index_col=0)
 		metadata = pd.read_csv(input['metadata'], index_col=0)
@@ -55,7 +122,7 @@ rule prepare_and_merge:
 		SRR_Acc_List_lung = pd.read_csv('info/SRR_Acc_List_lung.txt', index_col=0)
 		def get_run(run_):
 			print('Loading: ', run_)
-			adata = sc.read(run_)
+			adata = sc.read_h5ad(run_)
 			adata.var_names_make_unique()
 			sra_name = run_.split('ranger_')[1].split('/velocyto/')[0]
 			sampling_timepoint = SRR_Acc_List_lung.loc[sra_name]['sampling_timepoint']
@@ -66,33 +133,33 @@ rule prepare_and_merge:
 			addor = 'e' if time == '14' else 'd'
 			replicate = run_id.split('#')[-1]
 
-			orig_ident = 'ma_'+addor+time+'_lung_'+replicate
+			orig_ident = f'ma_{addor}{time}_lung_{replicate}'
 
-			adata.obs_names = [orig_ident+'_'+x for x in adata.obs_names]
+			adata.obs_names = [f"{orig_ident}_{x}" for x in adata.obs_names]
 			adata.obsm['X_pca_seurat'] = pd.merge(adata.obs, pca, how='left', left_index=True, right_index=True).values
 			adata.obsm['X_umap_seurat'] = pd.merge(adata.obs, umap, how='left', left_index=True, right_index=True).values
 			adata.obs = pd.merge(adata.obs, metadata, how='left', left_index=True, right_index=True)
 
-			# Filter like Emanuel
+			# Filter like in Seurat
 			adata = adata[~pd.isna(adata.obs['UMAP_1'])].copy()
 			return adata
 
 		print('Loading data...')
 		adatas = [get_run(run_) for run_ in input['runs_']]
 		print('Concating adatas...')
-		adata = ad.concat(adatas)
+		adata = sc.concat(adatas)
 
-		# add finer endo annotation
+		# Add finer endo annotation
 		ma_tab = pd.read_csv(input['endo_annot'], index_col=0)
 		adata.obs.celltype = adata.obs.celltype.astype(str)
 		adata.obs.loc[ma_tab['celltype'].index, 'celltype'] = ma_tab['celltype']
 
-		# norm and log, we do not scale
+		# Norm and log, we do not scale to keep data sparse
 		adata.layers['counts'] = adata.X.copy()
 		sc.pp.normalize_per_cell(adata)
 		sc.pp.log1p(adata)
 
-		# doublets
+		# Annotate doublets
 		sample_key = 'orig.ident'
 		obs_key = 'celltype'
 		parent_cells = infer_doublets_and_parents(adata, sample_key=sample_key, layer='counts')
@@ -128,24 +195,17 @@ rule prepare_and_merge:
 		# Complete set
 		prepare_embeddings(adata).write(output[0])
 
-		print('Writing subsets...')
-		# Celltype subsets
-		prepare_embeddings(adata[np.isin(adata.obs.celltype,
-		['Bronchial', 'Lymphatic', 'Capillary', 'Vein', 'Artery'])].copy()).write(output[1])
-		prepare_embeddings(adata[np.isin(adata.obs.celltype, ['Neutrophils', 'mixed2'])].copy()).write(output[2])
-
 rule R_extract:
 	input:
-		DIR+'rds_files/{rds_file}.rds'  # received by first author
+		DIR / 'rds_files/{rds_file}.rds'  # received by first author
 	output:
-		DIR+'seurat_exports/{rds_file}_seurat_pca.csv',
-		DIR+'seurat_exports/{rds_file}_seurat_umap.csv',
-		DIR+'seurat_exports/{rds_file}_seurat_metadata.csv'
+		DIR / 'seurat_exports/{rds_file}_seurat_pca.csv',
+		DIR / 'seurat_exports/{rds_file}_seurat_umap.csv',
+		DIR / 'seurat_exports/{rds_file}_seurat_metadata.csv'
 	resources:
 		mem='128G',
 		time='02:00:00'
-	conda:
-		"seurat_env"
+	conda: "seurat_env"
 	shell:
 		'''
 		cd {DIR}
@@ -159,41 +219,39 @@ rule R_extract:
 rule gzip:
 	input: "{i}"
 	output: "{i}.gz"
-	shell:
-		 "gzip {input}"
+	shell: "gzip {input}"
 
 rule cellranger_count:
 	input:
-		fastqR1=TEMPDIR+ "{run}/FASTQs/{run}_S1_L001_R1_001.fastq",
-		fastqR2=TEMPDIR+ "{run}/FASTQs/{run}_S1_L001_R2_001.fastq",
+		fastqR1=TEMPDIR /  "{run}/FASTQs/{run}_S1_L001_R1_001.fastq",
+		fastqR2=TEMPDIR /  "{run}/FASTQs/{run}_S1_L001_R2_001.fastq",
 		transcriptome=Gold_gtf
 	output:
-		cellranger_h5=DIR+"count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5",
-		bam=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam",
-		bai=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam.bai"
-	log: "log/{run}_count.log"
-	threads: 12
+		cellranger_h5=TEMPDIR / "count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5",
+		bam=TEMPDIR / "count_data/cellranger_{run}/outs/possorted_genome_bam.bam",
+		bai=TEMPDIR / "count_data/cellranger_{run}/outs/possorted_genome_bam.bam.bai"
+	threads: 16
 	shell:
 		'''
-		cd {DIR}/count_data/
+		cd {TEMPDIR}/count_data/
 		rm -fr cellranger_{wildcards.run}/  # https://twitter.com/johanneskoester/status/1059532816537522176?lang=en
 		cellranger count --id=cellranger_{wildcards.run} \
 		--fastqs={TEMPDIR}/{wildcards.run}/FASTQs \
 		--sample={wildcards.run} \
 		--transcriptome={input.transcriptome} \
 		--localmem=30 \
-		--localcores=12 > {log}
+		--localcores={threads}
 		'''
 
 rule cellranger_mkref:
 	input:
-		fasta=DIR+"Genome_MesAur1_0/GCA_000349665.1_MesAur1.0_genomic.fa",
-		gtf=DIR+"GSE162208_gtfs/GSE162208_ma1_genes_longer.gtf"
-	output: directory(DIR+"MesAur1_0_ref")
+		fasta=TEMPDIR / "Genome_MesAur1_0/GCA_000349665.1_MesAur1.0_genomic.fa",
+		gtf=TEMPDIR / "GSE162208_gtfs/GSE162208_ma1_genes_longer.gtf"
+	output: directory(TEMPDIR / "MesAur1_0_ref")
 	log: "log/mkref.log"
 	shell:
 		'''
-		cd {DIR}
+		cd {TEMPDIR}
 		cat GSE162208_gtfs/GSE162208_ma1_genes_longer.gtf | grep -v "MT\s" > GSE162208_gtfs/GSE162208_ma1_genes_longer_nomito.gtf
 		cellranger mkref --genome=MesAur1_0_ref \
 		--fasta={input.fasta} \
@@ -201,10 +259,10 @@ rule cellranger_mkref:
 		'''
 
 rule get_genome_annotation:
-	output: DIR+"Genome_MesAur1_0/GCA_000349665.1_MesAur1.0_genomic.fa"
+	output: TEMPDIR / "Genome_MesAur1_0/GCA_000349665.1_MesAur1.0_genomic.fa"
 	shell:
 		'''
-		cd {DIR}
+		cd {TEMPDIR}
 		mkdir -p Genome_MesAur1_0/
 		wget -P Genome_MesAur1_0/ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/349/665/GCA_000349665.1_MesAur1.0/GCA_000349665.1_MesAur1.0_genomic.fna.gz
 		gunzip Genome_MesAur1_0/GCA_000349665.1_MesAur1.0_genomic.fna.gz
@@ -212,10 +270,10 @@ rule get_genome_annotation:
 		'''
 
 rule sra_to_fastq:
-	input: TEMPDIR + "{run}/{run}.sra"
+	input: TEMPDIR / "{run}/{run}.sra"
 	output:
-		fastqR1=TEMPDIR + "{run}/FASTQs/{run}_S1_L001_R1_001.fastq",
-		fastqR2=TEMPDIR + "{run}/FASTQs/{run}_S1_L001_R2_001.fastq"
+		fastqR1=TEMPDIR / "{run}/FASTQs/{run}_S1_L001_R1_001.fastq",
+		fastqR2=TEMPDIR / "{run}/FASTQs/{run}_S1_L001_R2_001.fastq"
 	shell:
 		'''
 		mkdir -p {TEMPDIR}/{wildcards.run}/FASTQs/
@@ -226,19 +284,19 @@ rule sra_to_fastq:
 		'''
 
 rule download_sra:
-	output: temp(TEMPDIR + "{run}/{run}.sra")
+	output: temp(TEMPDIR / "{run}/{run}.sra")
 	shell:
 		'''
-		prefetch -v {wildcards.run} -O {DIR}
+		prefetch -v {wildcards.run} -O {TEMPDIR}
 		'''
 
 rule get_GEO_data:
 	output:
-		DIR+"GSE162208_gtfs/GSE162208_ma1_genes_longer.gtf",
-		directory(DIR+"GSE162208_counts")
+		TEMPDIR / "GSE162208_gtfs/GSE162208_ma1_genes_longer.gtf",
+		directory(TEMPDIR / "GSE162208_counts")
 	shell:
 		'''
-		cd {DIR}
+		cd {TEMPDIR}
 		wget --recursive --no-parent -nd -R "index.html*" ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE162nnn/GSE162208/suppl/
 		mkdir -p GSE162208_gtfs/
 		gunzip GSE162208_ma1_genes_longer.gtf.gz

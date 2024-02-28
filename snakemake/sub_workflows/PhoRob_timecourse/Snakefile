@@ -1,51 +1,102 @@
-# snakemake --profile=cubi-v1 --jobs 60 -k --use-conda
-# snakemake --forceall --dag | dot -Tpdf > snake_dag.pdf
-# snakemake --forceall --rulegraph | dot -Tpdf > snake_rulegraph.pdf
+"""
+Author: Stefan Peidli
+Aim: Snakemake workflow for Robo analysis.
+Date: 19.02.2024
+Run: snakemake
+DAG: snakemake --forceall --dag | dot -Tpdf > snake_dag.pdf
+Rulegraph: snakemake --forceall --rulegraph | dot -Tpdf > snake_rulegraph.pdf
+Description: This workflow produces 'PhoRob_timecourse_{subset}.h5'.
+"""
+import yaml
+import os
+import sys
+from pathlib import Path
 
 import pandas as pd
 import numpy as np
-import os
-import sys
+from snakemake.utils import min_version
 
-### PATHS ###
-import yaml
-with open('../../../config/config.yaml', 'r') as file:
-    config = yaml.safe_load(file)
-DIR = config['data_path']
+### CONFIGURATION ###
+min_version("6.4.1")  # set minimum snakemake version
+report: "report/workflow.rst"
+configfile: "../../../configuration/config.yaml"
+
+LIBRARIES = config['pr_libraries']
+
 # data directory on scratch
-DIR = config['tmp_path']
+TEMPDIR = Path(config['tmp_path'])
 # data directory on work
-WDIR = config['data_path']
-# local utils
-sys.path.insert(1, '../utils/')
-from utils import *
-# Genome annotation paths, please supply the Dwarf hamster gtf path here!
-GAP = "/fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/refdata-cellranger-pr1_fixed_names_filtered_complete_fixed_unknown_ext_rev3_S2/"
-GTF = GAP+"genes/genes.gtf"
+DIR = Path(config['data_path'])
+# path to genome
+GAP = Path("/fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/refdata-cellranger-pr1_fixed_names_filtered_complete_fixed_unknown_ext_rev3_S2/")
+GTF = GAP / "genes/genes.gtf"
 
-import yaml
-with open('snake_config.yml') as f:
-	snake_config = yaml.safe_load(f)
-LIBRARIES = snake_config['libraries']
+# local utils
+sys.path.insert(1, '../../../utils/')
+from utils import *
 
 rule all:
 	input:
-		[WDIR+'PhoRob_timecourse_'+subset+'.h5' for subset in ['all', 'endothelial', 'neutrophils']],
+		expand(DIR / 'PhoRob_timecourse_{subset}.h5', subset=['endothelial', 'neutrophils', 'tcells', 'macrophages'])
 
+rule extract_celltype:
+	input:
+		DIR / 'PhoRob_timecourse.h5'
+	output:
+		DIR / 'PhoRob_timecourse_{subset}.h5'
+	resources:
+		time='01:00:00',
+		mem_mb=32000,
+		disk_mb=32000
+	run:
+		import scanpy as sc
+		adata = sc.read_h5ad(input[0])
+
+		if wildcards.subset == 'endothelial':
+			mask = np.isin(adata.obs.celltype, ['Bronchial', 'Lymphatic', 'Capillary', 'Vein', 'Artery'])
+		elif wildcards.subset == 'neutrophils':
+			mask = np.isin(adata.obs.celltype, ['Neutrophils', 'mixed2'])
+		elif wildcards.subset == 'tcells':
+			mask = np.isin(adata.obs.celltype, ['TNKcells'])
+		elif wildcards.subset == 'macrophages':
+			mask = np.isin(adata.obs.celltype, ['Treml4+Macrophages', 'MonocyticMacrophages', 'InterstitialMacrophages', 'AlveolarMacrophages'])
+		else:
+			raise ValueError('Unknown subset')
+		adata = adata[mask].copy()
+
+		def prepare_embeddings(adata):
+			bdata = adata.copy()
+			# Seurat-pca based embeddings (aka "integrated")
+			sc.pp.neighbors(bdata, use_rep='X_pca_seurat')
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_seurat_based'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_seurat_based'] = bdata.obsm['X_diffmap']
+
+			# own embedding without integration ("vanilla")
+			sc.pp.highly_variable_genes(bdata, n_top_genes=2000)
+			sc.pp.pca(bdata, use_highly_variable=True)
+			sc.pp.neighbors(bdata)
+			sc.tl.umap(bdata)
+			sc.tl.diffmap(bdata)
+			bdata.obsm['X_umap_vanilla'] = bdata.obsm['X_umap']
+			bdata.obsm['X_diffmap_vanilla'] = bdata.obsm['X_diffmap']
+			del bdata.obsm['X_umap']
+			del bdata.obsm['X_diffmap']
+			return bdata
+		
+		prepare_embeddings(adata).write(output[0])
 
 rule prepare_and_merge:
 	input:
-		pca=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_pca.csv',
-		umap=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_umap.csv',
-		metadata=WDIR+'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_metadata.csv',
-		endo_annot=WDIR+'rds_files/pr_seu_endo_seurat_metadata.csv',
-		samples_cellranger=expand(WDIR+"count_data/cellranger_{lib}/outs/filtered_feature_bc_matrix.h5", lib=LIBRARIES)
+		pca=DIR / 'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_pca.csv',
+		umap=DIR / 'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_umap.csv',
+		metadata=DIR / 'seurat_exports/pr_lung_new_combined_integrated_annotated_seurat_metadata.csv',
+		endo_annot=DIR / 'rds_files/pr_seu_endo_seurat_metadata.csv',
+		samples_cellranger=expand(DIR / "count_data/cellranger_{lib}/outs/filtered_feature_bc_matrix.h5", lib=LIBRARIES)
 	output:
-		WDIR+'PhoRob_timecourse_all.h5',
-		WDIR+'PhoRob_timecourse_endothelial.h5',
-		WDIR+'PhoRob_timecourse_neutrophils.h5',
+		DIR / 'PhoRob_timecourse.h5'
 	resources:
-		mem='128G',
 		time='2-23:00:00',
 		disk_mb=128000,
 		mem_mb=128000
@@ -150,19 +201,13 @@ rule prepare_and_merge:
 		# Complete set
 		prepare_embeddings(adata).write(output[0])
 
-		print('Writing subsets...')
-		# Celltype subsets
-		prepare_embeddings(adata[np.isin(adata.obs.celltype,
-		['Bronchial', 'Lymphatic', 'Capillary', 'Vein', 'Artery'])].copy()).write(output[1])
-		prepare_embeddings(adata[np.isin(adata.obs.celltype, ['Neutrophils', 'mixed2'])].copy()).write(output[2])
-
 rule R_extract:
 	input:
-		WDIR+'rds_files/{rds_file}.rds'
+		DIR / 'rds_files/{rds_file}.rds'
 	output:
-		WDIR+'seurat_exports/{rds_file}_seurat_pca.csv',
-		WDIR+'seurat_exports/{rds_file}_seurat_umap.csv',
-		WDIR+'seurat_exports/{rds_file}_seurat_metadata.csv'
+		DIR / 'seurat_exports/{rds_file}_seurat_pca.csv',
+		DIR / 'seurat_exports/{rds_file}_seurat_umap.csv',
+		DIR / 'seurat_exports/{rds_file}_seurat_metadata.csv'
 	resources:
 		mem='128G',
 		time='02:00:00'
@@ -170,7 +215,7 @@ rule R_extract:
 		"seurat_env"
 	shell:
 		'''
-		cd {WDIR}
+		cd {DIR}
 		Rscript --vanilla {UTILS}/extract.R -f rds_files/{wildcards.rds_file}.rds
 		mkdir -p seurat_exports/
 		mv seurat_pca.csv seurat_exports/{wildcards.rds_file}_seurat_pca.csv
@@ -184,38 +229,36 @@ rule gzip:
 	resources:
 		mem='128G',
 		time='2-23:00:00'
-	shell:
-		 "gzip {input}"
+	shell: "gzip {input}"
 
 rule cellranger_count:
 	input:
-		fastqR1=DIR+ "{run}-L_S1_L001_R1_001.fastq",
-		fastqR2=DIR+ "{run}-L_S1_L001_R2_001.fastq",
+		fastqR1=TEMPDIR / "{run}-L_S1_L001_R1_001.fastq",
+		fastqR2=TEMPDIR / "{run}-L_S1_L001_R2_001.fastq",
 		transcriptome=GAP
 	output:
-		cellranger_h5=WDIR+"count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5",
-		bam=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam",
-		bai=DIR+"count_data/cellranger_{run}/outs/possorted_genome_bam.bam.bai"
+		cellranger_h5=DIR / "count_data/cellranger_{run}/outs/filtered_feature_bc_matrix.h5",
+		bam=TEMPDIR / "count_data/cellranger_{run}/outs/possorted_genome_bam.bam",
+		bai=TEMPDIR / "count_data/cellranger_{run}/outs/possorted_genome_bam.bam.bai"
 	resources:
 		mem='128G',
 		time='2-23:00:00'
-	log: DIR+"snakemake/log/{run}_count.log"
-	threads: 12
+	threads: 16
 	shell:
 		'''
-		cd {DIR}
+		cd {TEMPDIR}
 		mkdir -p count_data/
 		cd count_data/
 		rm -fr cellranger_{wildcards.run}/  # https://twitter.com/johanneskoester/status/1059532816537522176?lang=en
 		cellranger count \
 		--id=cellranger_{wildcards.run} \
-		--fastqs={DIR} \
+		--fastqs={TEMPDIR} \
 		--sample={wildcards.run}-L \
 		--transcriptome={input.transcriptome} \
 		--localmem=30 \
-		--localcores=12 > {log}
+		--localcores={threads}
 
 		# copy count matrix to WDIR, bam stays on scratch
-		mkdir -p {WDIR}count_data/cellranger_{wildcards.run}/outs/
-		cp {DIR}count_data/cellranger_{wildcards.run}/outs/*.h5 {WDIR}count_data/cellranger_{wildcards.run}/outs/
+		mkdir -p {DIR}count_data/cellranger_{wildcards.run}/outs/
+		cp {TEMPDIR}count_data/cellranger_{wildcards.run}/outs/*.h5 {DIR}count_data/cellranger_{wildcards.run}/outs/
 		'''

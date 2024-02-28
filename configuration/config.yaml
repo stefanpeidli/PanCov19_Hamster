@@ -1,0 +1,101 @@
+data_path: /g/huber/users/peidli/data/PanCov19/ # /Users/peidli/work/data/COVID
+tmp_path: /scratch/peidli/PanCov19/ # /Users/peidli/work/temp
+Gold_gtf: /fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/MesAurJ_rev3_ext_S2
+celltype_colors:
+  AlveolarMacrophages: '#DEABC0'
+  InterstitialMacrophages: '#B87BA0'
+  MonocyticMacrophages: '#B8245A'
+  Treml4+Macrophages: '#3E3156'
+  Neutrophils: '#0480AA'
+  cDC: '#506C7B'
+  pDC: '#81690A'
+  NK cells: '#68c8d9'
+  NKT cells: '#458c99'
+  CD4+ T cells: '#7ec4b0'
+  CD8+ T cells: '#3c806c'
+  activated T cells: '#6ab7eb'
+  ILC2: '#7f68d9'
+  Bcells: '#64C36F'
+  AT1: '#F5C848'
+  AT2: '#F67F48'
+  Fibroblasts: '#B4695E'
+  Ciliated: '#F63746'
+  Artery: '#0f2066'
+  Bronchial: '#380f66'
+  Vein: '#0f6366'
+  Capillary: '#0F3B66'
+  Lymphatic: '#650f66'
+  Myofibroblast: '#C5A480'
+  SmoothMuscle: '#644634'
+  Platelets: '#802D55'
+  Erythrocytes: '#CC3D00'
+  Mast cells: '#C0D18A'
+  Plasma cells: '#67CC00'
+  Other: '#D3D3D3'
+celltype_rough_colors:
+  Macrophages: '#B8245A'
+  Neutrophils: '#0480AA'
+  cDC: '#506C7B'
+  pDC: '#81690A'
+  DCs: '#506C7B'
+  T cells: '#388E8C'
+  NK cells: '#68c8d9'
+  TNKcells: '#388E8C'
+  ILC2: '#7f68d9'
+  Bcells: '#64C36F'
+  Fibroblasts: '#B4695E'
+  Epithelial cells: '#e0a14f'
+  Endothelial cells: '#0F3B66'
+  Myofibroblast: '#C5A480'
+  SmoothMuscle: '#644634'
+  Platelets: '#802D55'
+  Erythrocytes: '#CC3D00'
+  Mast cells: '#C0D18A'
+  Plasma cells: '#67CC00'
+  Other: '#D3D3D3'
+endo_colors:
+  Artery: '#F5A487'
+  Bronchial: '#61A0D4'
+  Vein: '#69EAAA'
+  Capillary: '#D4C361'
+  Lymphatic: '#D472F7'
+organism_colors:
+  Goldhamster: '#F1B342'
+  Dwarfhamster: '#327DC2'
+organism_dosage_colors:
+  Goldhamster_no dose: '#fce4b8'
+  Goldhamster_high dose: '#F1B342'
+  Dwarfhamster_no dose: '#d9e8ff'
+  Dwarfhamster_low dose: '#71A3C5'  # previously '#9ec4ff'
+  Dwarfhamster_high dose: '#155289'  # previously '#589efc'
+organism_dosage_time_colors:
+  Goldhamster_no dose_D0: '#fce4b8'
+  Goldhamster_high dose_D2: '#F8D491'
+  Goldhamster_high dose_D3: '#F5C369'
+  Goldhamster_high dose_D5: '#F1B342'
+  Goldhamster_high dose_E14: '#D18D10'
+  Dwarfhamster_no dose_D0: '#d9e8ff'
+  Dwarfhamster_low dose_D2: '#71A3C5'
+  Dwarfhamster_low dose_D3: '#155289'
+  Dwarfhamster_high dose_D2: '#71A3C5'
+  Dwarfhamster_high dose_D3: '#155289'
+dosage_colors:
+  no dose: 'tab:grey'
+  low dose: 'tab:blue'
+  high dose: 'tab:orange'
+pr_libraries:
+  - pr-D0-Z1
+  - pr-D0-Z2
+  - pr-D0-Z3
+  - pr-ld-D2-Z1
+  - pr-ld-D2-Z2
+  - pr-ld-D2-Z3
+  - pr-ld-D3-Z1
+  - pr-ld-D3-Z2
+  - pr-ld-D3-Z3
+  - pr-hd-D2-Z1
+  - pr-hd-D2-Z2
+  - pr-hd-D2-Z3
+  - pr-hd-D3-Z1
+  - pr-hd-D3-Z2
+  - pr-hd-D3-Z3
