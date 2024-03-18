@@ -1,5 +1,7 @@
-data_path: /g/huber/users/peidli/data/PanCov19/ # /Users/peidli/work/data/COVID
-tmp_path: /scratch/peidli/PanCov19/ # /Users/peidli/work/temp
+# data_path: /g/huber/users/peidli/data/PanCov19/ 
+data_path: /Users/peidli/work/data/COVID
+# tmp_path: /scratch/peidli/PanCov19/
+tmp_path: /Users/peidli/work/temp
 Gold_gtf: /fast/work/projects/bluethgen_landthaler/Cov19_Hamster/Genomes/MesAurJ_rev3_ext_S2
 celltype_colors:
   AlveolarMacrophages: '#DEABC0'

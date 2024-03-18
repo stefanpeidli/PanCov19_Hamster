@@ -10,6 +10,7 @@ import gseapy as gp
 import statsmodels.api as sm
 import decoupler as dc
 
+from itertools import product
 from functools import wraps
 from tqdm.auto import tqdm
 from warnings import warn
@@ -768,3 +769,75 @@ def obs_obs_aggregate_heatmap(adata, obs_keys, groupby, standard_scale='var',
         pl.yticks(rotation=obs_rotation) if swap_axes else pl.xticks(rotation=obs_rotation)
         if show: pl.show()
     return X
+
+def pseudo_bulk(adata, keys, layer='counts', min_cells_per_group=1, dtype=int):
+    """
+    Pseudo-bulk count data from adata grouped by one or multiple keys.
+    
+    Parameters
+    ----------
+    adata: AnnData
+        Annotated data matrix.
+    keys: str or list of str
+        Keys to group by.
+    layer: str or None
+        Layer to use. If None, uses adata.X.
+    min_cells_per_group: int
+        Minimum number of cells per group to be included. Per default all non-empty groups are included.
+    dtype: type
+        Data type of the returned matrix. Per default int. Set to float if you want to use non-integer data.
+
+    Returns
+    -------
+    sc.AnnData
+        Pseudo-bulk data.
+    """
+    
+    X = []
+    Y = []
+    for gs in tqdm(product(*[pd.unique(adata.obs[key]) for key in keys])):
+        mask = np.logical_and.reduce([adata.obs[key]==g for g, key in zip(gs, keys)])  # select cells
+        ncells = sum(mask)
+        if ncells < min_cells_per_group: continue
+        Y.append(list(gs)+[ncells])
+        X_ = adata[mask].layers[layer] if layer!=None else adata[mask].X  # select data
+        X.append(np.array(np.sum(X_, axis=0), dtype=dtype)[0])  # sum over cells
+    obs=pd.DataFrame(Y, columns=list(keys)+['ncells'])
+    return sc.AnnData(np.array(X), obs=obs, var=adata.var)
+
+def export_for_deseq(adata, keys, layer='counts', min_cells_per_group=1):
+    """
+    Pseudobulk and export data for DESeq2
+    
+    Parameters
+    ----------
+    adata: AnnData
+        Annotated data matrix.
+    keys: str or list of str
+        Keys to group by.
+    path: str
+        Path to export to.
+    name: str
+        Prefix of the exported files.
+    layer: str or None
+        Layer to use. If None, use raw data.
+    min_cells_per_group: int
+        Minimum number of cells per group to be included. Per default all non-empty groups are included.
+    
+    Returns
+    -------
+    writes two files to path:
+        {name}_countData.csv
+            Count data (adata.X).
+        {name}_colData.csv
+            Column data (adata.obs).
+    """
+    
+    # pdeudobulk
+    bdata = pseudo_bulk(adata, keys, layer=layer, min_cells_per_group=min_cells_per_group)
+    countData = pd.DataFrame(bdata.X, columns=bdata.var_names).T
+    colData = bdata.obs
+    # export
+    return countData, colData
+    # countData.to_csv(f'{path}/{name}_countData.csv')
+    # colData.to_csv(f'{path}/{name}_colData.csv', index=False)
