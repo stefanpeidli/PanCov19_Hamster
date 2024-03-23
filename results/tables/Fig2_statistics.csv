@@ -1,0 +1,271 @@
+,anova_f,anove_p,posthoc_dwarf,posthoc_gold
+AlveolarMacrophages,6.377728821476238,0.008131878228930982,"Dwarfhamster_D2_high dose    0.715001
+Dwarfhamster_D2_low dose     0.548418
+Dwarfhamster_D3_high dose    0.548418
+Dwarfhamster_D3_low dose     0.271557
+dtype: float64","Goldhamster_D2     0.648077
+Goldhamster_D3     0.648077
+Goldhamster_D5     0.648077
+Goldhamster_E14    0.113839
+dtype: float64"
+InterstitialMacrophages,8.626411510176556,0.0027927809240274794,"Dwarfhamster_D2_high dose    0.035244
+Dwarfhamster_D2_low dose     0.648077
+Dwarfhamster_D3_high dose    0.035244
+Dwarfhamster_D3_low dose     0.059480
+dtype: float64","Goldhamster_D2     0.273322
+Goldhamster_D3     0.227871
+Goldhamster_D5     0.004060
+Goldhamster_E14    0.027422
+dtype: float64"
+MonocyticMacrophages,18.16688467018712,0.00013974295090683688,"Dwarfhamster_D2_high dose    0.313778
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.044958
+Dwarfhamster_D3_low dose     0.042349
+dtype: float64","Goldhamster_D2     0.235333
+Goldhamster_D3     0.035244
+Goldhamster_D5     0.032452
+Goldhamster_E14    0.059480
+dtype: float64"
+Treml4+Macrophages,1.352953459132733,0.31693395054386775,"Dwarfhamster_D2_high dose    0.855132
+Dwarfhamster_D2_low dose     0.620278
+Dwarfhamster_D3_high dose    0.620278
+Dwarfhamster_D3_low dose     0.089915
+dtype: float64","Goldhamster_D2     0.715001
+Goldhamster_D3     0.071528
+Goldhamster_D5     0.071528
+Goldhamster_E14    0.090519
+dtype: float64"
+Neutrophils,11.212568001144586,0.00102491927902018,"Dwarfhamster_D2_high dose    0.023496
+Dwarfhamster_D2_low dose     0.273322
+Dwarfhamster_D3_high dose    0.023496
+Dwarfhamster_D3_low dose     0.023496
+dtype: float64","Goldhamster_D2     0.013948
+Goldhamster_D3     0.465209
+Goldhamster_D5     0.044958
+Goldhamster_E14    0.465209
+dtype: float64"
+cDC,14.376465808291947,0.00037516508789425004,"Dwarfhamster_D2_high dose    0.481747
+Dwarfhamster_D2_low dose     0.715001
+Dwarfhamster_D3_high dose    0.056919
+Dwarfhamster_D3_low dose     0.056919
+dtype: float64","Goldhamster_D2     0.784191
+Goldhamster_D3     0.110450
+Goldhamster_D5     0.018625
+Goldhamster_E14    0.089219
+dtype: float64"
+pDC,13.70293622857206,0.0004572054936535619,"Dwarfhamster_D2_high dose    0.010365
+Dwarfhamster_D2_low dose     0.315302
+Dwarfhamster_D3_high dose    0.044958
+Dwarfhamster_D3_low dose     0.073646
+dtype: float64","Goldhamster_D2     0.406975
+Goldhamster_D3     0.141802
+Goldhamster_D5     0.010402
+Goldhamster_E14    0.121126
+dtype: float64"
+T cells,9.541735677210584,0.0019138435056499411,"Dwarfhamster_D2_high dose    0.522817
+Dwarfhamster_D2_low dose     0.522817
+Dwarfhamster_D3_high dose    0.522817
+Dwarfhamster_D3_low dose     0.089915
+dtype: float64","Goldhamster_D2     0.648077
+Goldhamster_D3     0.227871
+Goldhamster_D5     0.089915
+Goldhamster_E14    0.135778
+dtype: float64"
+NK cells,5.8596574292244235,0.010775210678065637,"Dwarfhamster_D2_high dose    0.583882
+Dwarfhamster_D2_low dose     0.583882
+Dwarfhamster_D3_high dose    0.035244
+Dwarfhamster_D3_low dose     0.035244
+dtype: float64","Goldhamster_D2     0.522817
+Goldhamster_D3     0.027422
+Goldhamster_D5     0.007643
+Goldhamster_E14    0.160921
+dtype: float64"
+Bcells,9.166250776239487,0.0022272101341941053,"Dwarfhamster_D2_high dose    0.288254
+Dwarfhamster_D2_low dose     0.715001
+Dwarfhamster_D3_high dose    0.364429
+Dwarfhamster_D3_low dose     0.288254
+dtype: float64","Goldhamster_D2     0.481747
+Goldhamster_D3     0.288254
+Goldhamster_D5     0.715001
+Goldhamster_E14    0.089915
+dtype: float64"
+AT1,6.6692638272431335,0.0069862056971331625,"Dwarfhamster_D2_high dose    0.778510
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.778510
+Dwarfhamster_D3_low dose     0.070488
+dtype: float64","Goldhamster_D2     0.481747
+Goldhamster_D3     0.648077
+Goldhamster_D5     0.481747
+Goldhamster_E14    0.178439
+dtype: float64"
+AT2,4.75788399801714,0.02074262908454422,"Dwarfhamster_D2_high dose    0.778510
+Dwarfhamster_D2_low dose     0.722621
+Dwarfhamster_D3_high dose    0.784191
+Dwarfhamster_D3_low dose     0.220937
+dtype: float64","Goldhamster_D2     0.402485
+Goldhamster_D3     1.000000
+Goldhamster_D5     1.000000
+Goldhamster_E14    0.402485
+dtype: float64"
+Ciliated,5.266609458035178,0.0151726432606319,"Dwarfhamster_D2_high dose    0.648077
+Dwarfhamster_D2_low dose     0.648077
+Dwarfhamster_D3_high dose    0.648077
+Dwarfhamster_D3_low dose     0.143055
+dtype: float64","Goldhamster_D2     0.416826
+Goldhamster_D3     0.617428
+Goldhamster_D5     0.710917
+Goldhamster_E14    0.416826
+dtype: float64"
+Endothelial cells,12.239635013654395,0.0007231655592781828,"Dwarfhamster_D2_high dose    0.160921
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.160921
+Dwarfhamster_D3_low dose     0.024680
+dtype: float64","Goldhamster_D2     0.855132
+Goldhamster_D3     0.855132
+Goldhamster_D5     0.855132
+Goldhamster_E14    0.143055
+dtype: float64"
+ILC2,6.335041685948705,0.008317893398805397,"Dwarfhamster_D2_high dose    1.000000
+Dwarfhamster_D2_low dose     0.288254
+Dwarfhamster_D3_high dose    0.288254
+Dwarfhamster_D3_low dose     1.000000
+dtype: float64","Goldhamster_D2     0.313778
+Goldhamster_D3     0.071528
+Goldhamster_D5     0.361310
+Goldhamster_E14    0.007643
+dtype: float64"
+AlveolarMacrophages,6.377728821476238,0.008131878228930982,"Dwarfhamster_D2_high dose    0.715001
+Dwarfhamster_D2_low dose     0.548418
+Dwarfhamster_D3_high dose    0.548418
+Dwarfhamster_D3_low dose     0.271557
+dtype: float64","Goldhamster_D2     0.648077
+Goldhamster_D3     0.648077
+Goldhamster_D5     0.648077
+Goldhamster_E14    0.113839
+dtype: float64"
+Treml4+Macrophages,1.352953459132733,0.31693395054386775,"Dwarfhamster_D2_high dose    0.855132
+Dwarfhamster_D2_low dose     0.620278
+Dwarfhamster_D3_high dose    0.620278
+Dwarfhamster_D3_low dose     0.089915
+dtype: float64","Goldhamster_D2     0.715001
+Goldhamster_D3     0.071528
+Goldhamster_D5     0.071528
+Goldhamster_E14    0.090519
+dtype: float64"
+cDC,14.376465808291947,0.00037516508789425004,"Dwarfhamster_D2_high dose    0.481747
+Dwarfhamster_D2_low dose     0.715001
+Dwarfhamster_D3_high dose    0.056919
+Dwarfhamster_D3_low dose     0.056919
+dtype: float64","Goldhamster_D2     0.784191
+Goldhamster_D3     0.110450
+Goldhamster_D5     0.018625
+Goldhamster_E14    0.089219
+dtype: float64"
+pDC,13.70293622857206,0.0004572054936535619,"Dwarfhamster_D2_high dose    0.010365
+Dwarfhamster_D2_low dose     0.315302
+Dwarfhamster_D3_high dose    0.044958
+Dwarfhamster_D3_low dose     0.073646
+dtype: float64","Goldhamster_D2     0.406975
+Goldhamster_D3     0.141802
+Goldhamster_D5     0.010402
+Goldhamster_E14    0.121126
+dtype: float64"
+T cells,9.541735677210584,0.0019138435056499411,"Dwarfhamster_D2_high dose    0.522817
+Dwarfhamster_D2_low dose     0.522817
+Dwarfhamster_D3_high dose    0.522817
+Dwarfhamster_D3_low dose     0.089915
+dtype: float64","Goldhamster_D2     0.648077
+Goldhamster_D3     0.227871
+Goldhamster_D5     0.089915
+Goldhamster_E14    0.135778
+dtype: float64"
+Bcells,9.166250776239487,0.0022272101341941053,"Dwarfhamster_D2_high dose    0.288254
+Dwarfhamster_D2_low dose     0.715001
+Dwarfhamster_D3_high dose    0.364429
+Dwarfhamster_D3_low dose     0.288254
+dtype: float64","Goldhamster_D2     0.481747
+Goldhamster_D3     0.288254
+Goldhamster_D5     0.715001
+Goldhamster_E14    0.089915
+dtype: float64"
+AT1,6.6692638272431335,0.0069862056971331625,"Dwarfhamster_D2_high dose    0.778510
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.778510
+Dwarfhamster_D3_low dose     0.070488
+dtype: float64","Goldhamster_D2     0.481747
+Goldhamster_D3     0.648077
+Goldhamster_D5     0.481747
+Goldhamster_E14    0.178439
+dtype: float64"
+AT2,4.75788399801714,0.02074262908454422,"Dwarfhamster_D2_high dose    0.778510
+Dwarfhamster_D2_low dose     0.722621
+Dwarfhamster_D3_high dose    0.784191
+Dwarfhamster_D3_low dose     0.220937
+dtype: float64","Goldhamster_D2     0.402485
+Goldhamster_D3     1.000000
+Goldhamster_D5     1.000000
+Goldhamster_E14    0.402485
+dtype: float64"
+Ciliated,5.266609458035178,0.0151726432606319,"Dwarfhamster_D2_high dose    0.648077
+Dwarfhamster_D2_low dose     0.648077
+Dwarfhamster_D3_high dose    0.648077
+Dwarfhamster_D3_low dose     0.143055
+dtype: float64","Goldhamster_D2     0.416826
+Goldhamster_D3     0.617428
+Goldhamster_D5     0.710917
+Goldhamster_E14    0.416826
+dtype: float64"
+Endothelial cells,12.239635013654395,0.0007231655592781828,"Dwarfhamster_D2_high dose    0.160921
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.160921
+Dwarfhamster_D3_low dose     0.024680
+dtype: float64","Goldhamster_D2     0.855132
+Goldhamster_D3     0.855132
+Goldhamster_D5     0.855132
+Goldhamster_E14    0.143055
+dtype: float64"
+ILC2,6.335041685948705,0.008317893398805397,"Dwarfhamster_D2_high dose    1.000000
+Dwarfhamster_D2_low dose     0.288254
+Dwarfhamster_D3_high dose    0.288254
+Dwarfhamster_D3_low dose     1.000000
+dtype: float64","Goldhamster_D2     0.313778
+Goldhamster_D3     0.071528
+Goldhamster_D5     0.361310
+Goldhamster_E14    0.007643
+dtype: float64"
+InterstitialMacrophages,8.626411510176556,0.0027927809240274794,"Dwarfhamster_D2_high dose    0.035244
+Dwarfhamster_D2_low dose     0.648077
+Dwarfhamster_D3_high dose    0.035244
+Dwarfhamster_D3_low dose     0.059480
+dtype: float64","Goldhamster_D2     0.273322
+Goldhamster_D3     0.227871
+Goldhamster_D5     0.004060
+Goldhamster_E14    0.027422
+dtype: float64"
+MonocyticMacrophages,18.16688467018712,0.00013974295090683688,"Dwarfhamster_D2_high dose    0.313778
+Dwarfhamster_D2_low dose     0.927264
+Dwarfhamster_D3_high dose    0.044958
+Dwarfhamster_D3_low dose     0.042349
+dtype: float64","Goldhamster_D2     0.235333
+Goldhamster_D3     0.035244
+Goldhamster_D5     0.032452
+Goldhamster_E14    0.059480
+dtype: float64"
+NK cells,5.8596574292244235,0.010775210678065637,"Dwarfhamster_D2_high dose    0.583882
+Dwarfhamster_D2_low dose     0.583882
+Dwarfhamster_D3_high dose    0.035244
+Dwarfhamster_D3_low dose     0.035244
+dtype: float64","Goldhamster_D2     0.522817
+Goldhamster_D3     0.027422
+Goldhamster_D5     0.007643
+Goldhamster_E14    0.160921
+dtype: float64"
+Neutrophils,11.212568001144586,0.00102491927902018,"Dwarfhamster_D2_high dose    0.023496
+Dwarfhamster_D2_low dose     0.273322
+Dwarfhamster_D3_high dose    0.023496
+Dwarfhamster_D3_low dose     0.023496
+dtype: float64","Goldhamster_D2     0.013948
+Goldhamster_D3     0.465209
+Goldhamster_D5     0.044958
+Goldhamster_E14    0.465209
+dtype: float64"

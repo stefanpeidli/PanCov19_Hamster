@@ -1,0 +1,42 @@
+Gene name	Common name	Knockout described in first research paper	Tested in macrophage polarization
+M2 marker panel
+Retnla	FIZZ1, RELMα	Yes	Immunoregulatory against excessive TH2 responses
+Clec10a	Mgl2	Yes	ND
+Ccl17	Ccl17	Yes	ND
+Ccl24	Eotaxin-2	No	ND
+Irf4	Irf4	Yes	Required for M2 macrophage development
+Chil3b	Chitinase 3, Chi3l3, Ym1	No	ND
+Mrc1	Mannose receptor	No	ND
+Arg1a	Arginase-1	Yes	Immunoregulatory against excessive TH2 responses
+RNase2ac	Ear11	No	ND
+Ear2	Ear2	No	ND
+Ccl8	Ccl8	No	ND
+Melad	Mela	No	ND
+Clec7a	Dectin-1	No	Important antifungal mechanism
+Pdcd1lg2	PD-L2	Yes	Partly; required for M2 propagation of Foxp3+ Treg
+Socs2	Socs2	Yes	ND
+Cdh1	Cadherin 1	No	Not required
+Ppard	PPARδ	Yes	Required for M2 macrophage development
+Pparg	PPARγ	Yes	Required for M2 macrophage development
+Ccl22	Ccl22	No	ND
+M1 marker panel
+Il1a	Il1a	Yes	Defects in normal M1 type inflammation in the absence of IL-1R signaling
+Il1b	Il1b	Yes	Defects in normal M1 type inflammation in the absence of IL-1R signaling
+IL6	IL6	Yes	Unknown. Increases IL-4Rα expression (same pathway as mediated by IL-10)
+IL12a	IL12a	Yes	Indirect defects in TH1 responses (and hence IFN-γ production)
+Il12b	Il12b	Yes	Indirect defects in TH1 responses (and hence IFN-γ production)
+Il23a	Il23a	Yes	ND
+IL27	IL27	Yes	ND
+Tnf	Tnf	Yes	Required to suppress M2 macrophages; required for normal M1 macrophages
+Csf3	G-CSF	Yes	ND
+Csf2	GM-CSF	Yes	Required in part for macrophage viability and expansion
+Nfkbiz	IκBζ	Yes	Selective defects in macrophage inflammatory signaling
+Ccl1	Ccl1	Yes	ND
+Cxcl13	Cxcl13	Yes	ND
+Ccl11	Eotaxin	Yes	ND
+Cxcl2	Cxcl2	No	ND
+Tnfaip3	A20	Yes	Unknown; prediction of increased M1 associated with increased inflammation
+Socs3	Socs3	Yes	Research of the role of SOCS proteins in polarization is controversial (126)
+Peli1	Pellino 1	Yes (E3 ligase-deficient knockin	ND
+Nos2	iNOS	Yes	Key antimicrobial defense and signaling pathway
+Marco	Marco	Yes	ND

@@ -1,0 +1,676 @@
+celltype,Organism,Dosage,Organism_Dosage,Time,replicate,mean_virus_counts,mean_virus_normalized_counts,fraction_virus_positive_cells,cell_counts,cells_with_virus
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.04878048780487805,0.0005887402887429098,0.04878048780487805,41,2
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,10,0
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,3,0
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.02127659574468085,0.00044428055428441917,0.02127659574468085,47,1
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.023255813953488372,0.00031262016337529766,0.023255813953488372,43,1
+AT1,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,41,0
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,2.2857142857142856,0.048979104836295306,0.2857142857142857,7,2
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.26666666666666666,0.003364336206534093,0.26666666666666666,15,4
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,36.214285714285715,2.1177731949215626,0.21428571428571427,14,3
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.8571428571428571,0.03043056016523,0.5714285714285714,7,4
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.2,0.0025513458349279198,0.2,5,1
+AT1,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,13,0
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,67.58558558558559,2.406715275108435,0.1981981981981982,222,44
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.010638297872340425,0.00022491116009176382,0.010638297872340425,94,1
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,28.833333333333332,0.7493579798896651,0.030303030303030304,66,2
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.03389830508474576,0.001283853345253463,0.03389830508474576,59,2
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.11392405063291139,0.0047405079642003686,0.05063291139240506,79,4
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,94.16326530612245,1.669827551117398,0.25510204081632654,98,25
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,12,0
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,3.2131147540983607,0.19825118109271297,0.08196721311475409,61,5
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,179.14705882352942,2.0778976842921857,0.08823529411764706,34,3
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,110,0
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,164,0
+AT1,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,165,0
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.050955414012738856,0.0005367710118882694,0.012738853503184714,157,2
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,78,0
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,73,0
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.09202453987730061,0.0009103771884376546,0.07975460122699386,163,13
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.058823529411764705,0.00045312831433166824,0.047058823529411764,85,4
+AT2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,138,0
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.25210084033613445,0.0018993972055479304,0.17647058823529413,119,21
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.4935064935064935,0.0031799004532923987,0.19480519480519481,77,15
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,1.592920353982301,0.013808928781298711,0.18584070796460178,113,21
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.1794871794871795,0.0017552792040191566,0.16666666666666666,78,13
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.03225806451612903,0.0002710533948082419,0.03225806451612903,31,1
+AT2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.025806451612903226,0.0002104465761718071,0.025806451612903226,155,4
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.3055555555555556,0.0027243364726588404,0.20833333333333334,72,15
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.296875,0.0018166492989679969,0.03125,128,4
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.010101010101010102,9.449027222647374e-05,0.010101010101010102,99,1
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.23893805309734514,0.002075291624400323,0.12389380530973451,113,14
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.06790123456790123,0.0005448845802816599,0.05555555555555555,162,9
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.397196261682243,0.0029640752240591185,0.21495327102803738,214,46
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,39,0
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.06818181818181818,0.00042304104202113226,0.05,220,11
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.029585798816568046,0.00016573795712261597,0.011834319526627219,169,2
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,184,0
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,149,0
+AT2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,207,0
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.03007518796992481,0.00022359810270119172,0.03007518796992481,133,4
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,75,0
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,115,0
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,1.75,0.006349078797667325,0.0875,80,7
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,2.5970149253731343,0.036152747926267804,0.16417910447761194,67,11
+AlveolarMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.1986754966887417,0.001031715305897685,0.013245033112582781,151,2
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,29.085714285714285,0.07816623707928867,0.6,105,63
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,21.974025974025974,0.158800529753488,0.7272727272727273,77,56
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,36.58064516129032,0.17061919687103327,0.6612903225806451,62,41
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,21.935897435897434,0.08493736533783916,0.5256410256410257,78,41
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,8.477777777777778,0.057197440186447394,0.4888888888888889,90,44
+AlveolarMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,7.511111111111111,0.033046929845338864,0.1,90,9
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,2.979591836734694,0.015800269433413852,0.3129251700680272,147,46
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.09722222222222222,0.00045520409586309585,0.037037037037037035,216,8
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.02100840336134454,0.00011026634044950336,0.018907563025210083,476,9
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,2.6958333333333333,0.012708914502376293,0.05416666666666667,240,13
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.895910780669145,0.002656507616937967,0.09293680297397769,269,25
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,2.764705882352941,0.010391897860088144,0.25,272,68
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.6396396396396397,0.0018173977909376243,0.2072072072072072,111,23
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.6953125,0.00205416155460844,0.171875,128,22
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,1.0056818181818181,0.003481280818325776,0.26136363636363635,176,46
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,245,0
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,312,0
+AlveolarMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,362,0
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,42,0
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,30,0
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,48,0
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,33,0
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.030303030303030304,0.0008297653423611788,0.030303030303030304,33,1
+Artery,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,37,0
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,17.7,0.40226596976693046,0.25,20,5
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,1.0,0.01879530246998201,0.08888888888888889,45,4
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.2857142857142857,0.0050615149615610335,0.23809523809523808,42,10
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.17647058823529413,0.0037906529124808732,0.14705882352941177,34,5
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.1111111111111111,0.0021725669101660943,0.1111111111111111,18,2
+Artery,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,30,0
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.15151515151515152,0.006168147170012188,0.13636363636363635,66,9
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.10909090909090909,0.0022651766837813274,0.01818181818181818,55,1
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.023809523809523808,0.0011125945705384953,0.023809523809523808,42,1
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.09090909090909091,0.0011811577498723955,0.09090909090909091,22,2
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.058823529411764705,0.0012344916980433294,0.029411764705882353,34,1
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.17073170731707318,0.006891142973106447,0.17073170731707318,41,7
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,10,0
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.09090909090909091,0.0015623403114256482,0.09090909090909091,33,3
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,26,0
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,27,0
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,29,0
+Artery,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,33,0
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0630841121495327,0.0019375733969857816,0.011682242990654205,428,5
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,645,0
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,633,0
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.039153439153439155,0.001222113459057686,0.03597883597883598,945,34
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.05341246290801187,0.0016718568687280337,0.02967359050445104,337,10
+Bcells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0018975332068311196,5.416880407739431e-05,0.0018975332068311196,527,1
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.7043795620437956,0.019536544641921276,0.145985401459854,274,40
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,2.9703703703703703,0.05834936583789074,0.15555555555555556,135,21
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.29411764705882354,0.005853722884579121,0.16176470588235295,136,22
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.420863309352518,0.010723290869952051,0.1474820143884892,556,82
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,1.0892857142857142,0.025593531457545955,0.07589285714285714,224,17
+Bcells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.019630484988452657,0.000632471970356294,0.015011547344110854,866,13
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.4322916666666667,0.011297112819803888,0.203125,192,39
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.019455252918287938,0.0005314013415035443,0.019455252918287938,257,5
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.02564102564102564,0.0006554927326695508,0.02564102564102564,429,11
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.11436170212765957,0.003172655857168797,0.026595744680851064,376,10
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.12535612535612536,0.0035056052533279976,0.05982905982905983,351,21
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.240625,0.006304157980797918,0.19375,320,62
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.006711409395973154,0.00013481635506764765,0.006711409395973154,298,2
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.04712041884816754,0.00119272673001698,0.04712041884816754,191,9
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,99,0
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,348,0
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,388,0
+Bcells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,292,0
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.006024096385542169,0.0001674123494434398,0.006024096385542169,332,2
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,148,0
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,273,0
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.045454545454545456,0.0014608119832476743,0.041666666666666664,264,11
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.028985507246376812,0.0008535970791802039,0.028985507246376812,276,8
+Bronchial,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,318,0
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.5024390243902439,0.01009665553911448,0.14146341463414633,410,58
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,4.258449304174951,0.16679327761181487,0.18290258449304175,503,92
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.5403949730700179,0.012023884141526223,0.18312387791741472,557,102
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,1.6802030456852792,0.047305774203141374,0.1700507614213198,394,67
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.12173913043478261,0.00251649791153715,0.0782608695652174,230,18
+Bronchial,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.10580204778156997,0.001729841516175709,0.013651877133105802,293,4
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.2761904761904762,0.010791403092381375,0.18412698412698414,315,58
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.022151898734177215,0.0009404785046330943,0.015822784810126583,316,5
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,204,0
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.051470588235294115,0.001569018169737731,0.04411764705882353,136,6
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.05181347150259067,0.0023092001810621487,0.05181347150259067,193,10
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,4.404255319148936,0.06638979067872428,0.17446808510638298,235,41
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,109,0
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.09917355371900827,0.002919092228911245,0.045454545454545456,242,11
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.005847953216374269,0.0001491444329603234,0.005847953216374269,171,1
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,196,0
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,286,0
+Bronchial,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,313,0
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.007407407407407408,0.00016033349366682665,0.007407407407407408,135,1
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,251,0
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,241,0
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.019230769230769232,0.0005096850998686259,0.019230769230769232,104,2
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.012048192771084338,0.0003459142340248157,0.012048192771084338,83,1
+CD4+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.009433962264150943,0.00020955047232676415,0.009433962264150943,106,1
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.14285714285714285,0.002797630037651576,0.09523809523809523,21,2
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,8.18918918918919,0.2337858990394915,0.35135135135135137,37,13
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.22448979591836735,0.005922170813152561,0.20408163265306123,49,10
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.22784810126582278,0.005603856740157459,0.13924050632911392,79,11
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.29508196721311475,0.007784355328280532,0.08196721311475409,61,5
+CD4+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.016666666666666666,0.00046280742585546084,0.016666666666666666,120,2
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.0,0.0,0.0,3,0
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.02127659574468085,0.0005154535606442745,0.02127659574468085,141,3
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,254,0
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.016853932584269662,0.00029913112229934384,0.016853932584269662,178,3
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.06635071090047394,0.001407344006254927,0.052132701421800945,211,11
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.2621951219512195,0.005305696436929103,0.23780487804878048,164,39
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,139,0
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.03,0.0006200976191384,0.03,100,3
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.016666666666666666,0.00042247570764681003,0.016666666666666666,60,1
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,180,0
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,210,0
+CD4+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,144,0
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0125,0.0003168567807351075,0.0125,80,1
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,121,0
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,115,0
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.10989010989010989,0.0023019696226517197,0.06593406593406594,91,6
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.03278688524590164,0.0007072235816631066,0.01639344262295082,61,1
+CD8+ T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,77,0
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.0,0.0,0.0,16,0
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.1111111111111111,0.002827254735651678,0.1111111111111111,9,1
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,1.393939393939394,0.022929029299100033,0.2727272727272727,33,9
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.10638297872340426,0.0021874901820914234,0.10638297872340426,47,5
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.06818181818181818,0.0018666455240177841,0.06818181818181818,44,3
+CD8+ T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.22641509433962265,0.004529876603289094,0.03773584905660377,53,2
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.3333333333333333,0.0073051355102637,0.3333333333333333,3,1
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.01639344262295082,0.0002914908005503344,0.01639344262295082,61,1
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,90,0
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.029850746268656716,0.0004977366718664119,0.029850746268656716,67,2
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.03260869565217391,0.0007602914041805946,0.03260869565217391,92,3
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.18085106382978725,0.003570928729803379,0.1702127659574468,94,16
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.017543859649122806,0.00024636792092575264,0.017543859649122806,57,1
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.03125,0.0006355772912151048,0.03125,64,2
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,41,0
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,81,0
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,89,0
+CD8+ T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,58,0
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.012987012987012988,0.00039886403522767144,0.012987012987012988,77,1
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,44,0
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,74,0
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.05952380952380952,0.0017359673894538918,0.05952380952380952,84,5
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.04504504504504504,0.0014600090651563362,0.04504504504504504,111,5
+Capillary,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0106951871657754,0.00032351370982067326,0.0106951871657754,187,2
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.10101010101010101,0.0035744837819718512,0.10101010101010101,99,10
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.24855491329479767,0.006413310088559461,0.1676300578034682,173,29
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.2032967032967033,0.005696019263111275,0.17582417582417584,182,32
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.2127659574468085,0.004803151785343562,0.12056737588652482,141,17
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.06172839506172839,0.001485120885750257,0.04938271604938271,162,8
+Capillary,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.02631578947368421,0.0006352415890807061,0.02631578947368421,114,3
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.13333333333333333,0.0028309516382644955,0.08888888888888889,45,4
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.020833333333333332,0.0006779477166720897,0.020833333333333332,48,1
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,58,0
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,19,0
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.30434782608695654,0.004327506116747122,0.08695652173913043,46,4
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.1276595744680851,0.0047009124548131834,0.10638297872340426,47,5
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,38,0
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.02830188679245283,0.000545207242221785,0.02830188679245283,106,3
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.01639344262295082,0.0002876547222837492,0.01639344262295082,61,1
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,59,0
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,57,0
+Capillary,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,69,0
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.09090909090909091,0.00019346064333401817,0.09090909090909091,11,1
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,4,0
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,4,0
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.2,0.0027766208524226,0.2,5,1
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.1111111111111111,0.0019213403270121224,0.1111111111111111,9,1
+Ciliated,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,10,0
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,8.6,0.09212197640371068,0.6,5,3
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,13.357142857142858,0.08746902985415447,0.5714285714285714,14,8
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,18.25,0.12497858011629115,0.875,8,7
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.6,0.006350682579610439,0.4,5,2
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,1.0,0.0062731321748949334,0.3333333333333333,3,1
+Ciliated,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.5714285714285714,0.004482847504735014,0.14285714285714285,7,1
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,1.8695652173913044,0.01105826660770003,0.13043478260869565,23,3
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,10,0
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,5,0
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.8571428571428571,0.008557503812359058,0.42857142857142855,7,3
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,1.9375,0.008395483666486582,0.3125,16,5
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,1.1666666666666667,0.009704453841170265,0.3333333333333333,6,2
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,3,0
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,5,0
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,11,0
+Ciliated,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,8,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,25,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,12,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,7,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,5,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.0,0.0,0.0,11,0
+Erythrocytes,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.07692307692307693,0.002467856173342215,0.07692307692307693,13,1
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,1.25,0.03718358822327991,0.5,8,4
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.15,0.003621121570767355,0.15,20,3
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,8,0
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,7,0
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.12,0.00320512996831048,0.12,25,3
+Erythrocytes,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.16666666666666666,0.002353716518382533,0.16666666666666666,6,1
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.5714285714285714,0.017100857547345884,0.5,14,7
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,4,0
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,3,0
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,3,0
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,3.125,0.05536853295535075,0.125,8,1
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.25,0.007587515077363456,0.25,16,4
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,5,0
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,10,0
+Erythrocytes,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,20,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,5,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,3,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,4,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,7,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.0,0.0,0.0,7,0
+Fibroblasts,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,12,0
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.2857142857142857,0.003956019729716729,0.2857142857142857,7,2
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,1.0,0.0072532095452237,1.0,1,1
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,2,0
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.96,0.010891710627114679,0.16,25,4
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.3333333333333333,0.0014791148976452334,0.3333333333333333,3,1
+Fibroblasts,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,1,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.15789473684210525,0.0029068069670540523,0.15789473684210525,38,6
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,6,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,6,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,12,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.2,0.00307834385100816,0.2,5,1
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.1,0.00099157164105106,0.1,10,1
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,1,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,5,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,19,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,4,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,10,0
+Fibroblasts,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,8,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,10,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,11,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,11,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,5,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.0,0.0,0.0,4,0
+ILC2,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,5,0
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.1,0.00259942812581232,0.1,10,1
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.16666666666666666,0.004116453364039875,0.16666666666666666,12,2
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,12,0
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.0625,0.0018491124260355,0.0625,16,1
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,10,0
+ILC2,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,19,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.19047619047619047,0.004438644413076891,0.19047619047619047,21,4
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,27,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.02127659574468085,0.00048006759351716807,0.02127659574468085,47,1
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.07142857142857142,0.00110020002465375,0.07142857142857142,56,4
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.05128205128205128,0.0010145321816409335,0.05128205128205128,39,2
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,3.8857142857142857,0.07245780432481638,0.22857142857142856,35,8
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,18,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.03571428571428571,0.000937875150060025,0.03571428571428571,28,1
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,20,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,41,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,57,0
+ILC2,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,56,0
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.01694915254237288,0.00012582889786468305,0.01694915254237288,59,1
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,36,0
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,51,0
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.8148148148148148,0.005171109785152007,0.07407407407407407,27,2
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.37254901960784315,0.0028979796547953605,0.1437908496732026,153,22
+InterstitialMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0967741935483871,0.0007492002287558033,0.03225806451612903,31,1
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,4.325153374233129,0.02249065830320136,0.44171779141104295,163,72
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,5.078947368421052,0.022568761783739677,0.4631578947368421,190,88
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,2.144144144144144,0.01189254875453876,0.4864864864864865,111,54
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.9831932773109243,0.004981230427095628,0.3697478991596639,119,44
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.6388888888888888,0.0029359755839412326,0.2361111111111111,144,34
+InterstitialMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.15463917525773196,0.0008869663700376227,0.10309278350515463,97,10
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,30.296296296296298,0.16589117685674432,0.5185185185185185,81,42
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,7.364705882352941,0.0338846713150423,0.2235294117647059,85,19
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,10.035714285714286,0.03821973911542598,0.19285714285714287,140,27
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,14.964912280701755,0.059600755578479325,0.20175438596491227,114,23
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,2.622950819672131,0.013974988299015865,0.19672131147540983,122,24
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,38.00961538461539,0.15939735673341035,0.38461538461538464,104,40
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,1.2168949771689497,0.004090450438703254,0.16666666666666666,438,73
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,2.2264150943396226,0.009557634700762511,0.21293800539083557,371,79
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.647495361781076,0.0035032273237964183,0.21150278293135436,539,114
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,94,0
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,125,0
+InterstitialMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,128,0
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0625,0.0022139567835635877,0.0625,16,1
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,2,0
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,2,0
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,7,0
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.0,0.0,0.0,3,0
+Lymphatic,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,9,0
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.2,0.01639344262295082,0.2,5,1
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.25,0.01152073732718895,0.25,4,1
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.16666666666666666,0.006979341150195416,0.16666666666666666,6,1
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.27586206896551724,0.00770623600311458,0.1724137931034483,29,5
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,6,0
+Lymphatic,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,4,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.4375,0.021298172097311007,0.375,16,6
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,15,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,8,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.1,0.00163398692810457,0.1,10,1
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.125,0.0050627784528149,0.125,8,1
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.3333333333333333,0.0128763624484567,0.3333333333333333,6,2
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,1,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,5,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,7,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,9,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,12,0
+Lymphatic,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,9,0
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.034482758620689655,0.0013543895766178174,0.034482758620689655,29,1
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,56,0
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,46,0
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,3,0
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.125,0.0011341983486072,0.125,8,1
+Mast cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,9,0
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.3076923076923077,0.011005373467388283,0.3076923076923077,13,4
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.27586206896551724,0.006746056810799438,0.2413793103448276,29,7
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.08333333333333333,0.003031226581383321,0.08333333333333333,24,2
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.07142857142857142,0.0013752131580394929,0.07142857142857142,14,1
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.15384615384615385,0.004925556148526722,0.15384615384615385,13,2
+Mast cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,25,0
+Mast cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,1,0
+Mast cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,1,0
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,92,0
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,62,0
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,46,0
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.01935483870967742,0.00017335146958283936,0.01935483870967742,155,3
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.02912621359223301,0.00024565484797349566,0.019417475728155338,206,4
+MonocyticMacrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,112,0
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.23636363636363636,0.0012901515526111437,0.20909090909090908,110,23
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.5080213903743316,0.00265654483282242,0.18181818181818182,187,34
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,2.591240875912409,0.014882575302658836,0.22627737226277372,137,31
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.2548076923076923,0.0014118504963455984,0.1778846153846154,208,37
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,1.0362694300518134,0.003895167888853456,0.07772020725388601,193,15
+MonocyticMacrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.039647577092511016,0.00028746251102159954,0.03524229074889868,227,8
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.6873156342182891,0.0062933150682323745,0.23893805309734514,339,81
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0223463687150838,0.00023052430482749605,0.0223463687150838,358,8
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.012953367875647668,0.00010331455616827437,0.012953367875647668,386,5
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.11464968152866242,0.0008057491631334878,0.040339702760084924,471,19
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.05504587155963303,0.00044570386461292936,0.04036697247706422,545,22
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.2433734939759036,0.002294724382716726,0.16626506024096385,415,69
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.089058524173028,0.000401695187530783,0.022900763358778626,393,9
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.031413612565445025,0.00023804219852981726,0.031413612565445025,382,12
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.060263653483992465,0.0004285909434307074,0.032015065913371,531,17
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,283,0
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,264,0
+MonocyticMacrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,271,0
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.01639344262295082,0.00020628466871713605,0.01639344262295082,61,1
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,15,0
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,32,0
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.01818181818181818,0.0002922182285730982,0.01818181818181818,55,1
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.02040816326530612,0.00030432692015070205,0.02040816326530612,49,1
+Myofibroblast,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,57,0
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.18181818181818182,0.00312184680514945,0.13636363636363635,22,3
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.17777777777777778,0.003495753703663615,0.17777777777777778,45,8
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,1.2619047619047619,0.04329329108069926,0.14285714285714285,42,6
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.14556962025316456,0.002319576615101084,0.14556962025316456,158,23
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.04,0.00075775166956897,0.04,50,2
+Myofibroblast,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,33,0
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.27906976744186046,0.007265379833682883,0.16279069767441862,86,14
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.017241379310344827,0.0004869070689168259,0.017241379310344827,58,1
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,59,0
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.034482758620689655,0.000709229918154869,0.034482758620689655,29,1
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.1,0.00265656649571869,0.075,40,3
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.17857142857142858,0.003998999310001209,0.16071428571428573,56,9
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,19,0
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.018867924528301886,0.0004871656216964076,0.018867924528301886,53,1
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.01818181818181818,0.0005188875051888746,0.01818181818181818,55,1
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,37,0
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,35,0
+Myofibroblast,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,61,0
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.011235955056179775,0.0002795709145603326,0.011235955056179775,89,1
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,76,0
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,164,0
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.028985507246376812,0.0005603367160557029,0.028985507246376812,69,2
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.06315789473684211,0.0011739939669175863,0.06315789473684211,95,6
+NK cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,73,0
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.24778761061946902,0.004919970380975528,0.11504424778761062,113,13
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.391304347826087,0.0057490427042507265,0.21739130434782608,46,10
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,2.963855421686747,0.034440455470472676,0.2891566265060241,83,24
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.19008264462809918,0.0038195249636436804,0.1487603305785124,121,18
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.04395604395604396,0.0010360149261700187,0.04395604395604396,91,4
+NK cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.008130081300813009,0.00013312385612280122,0.008130081300813009,246,2
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.19736842105263158,0.0021425389570882357,0.11842105263157894,76,9
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.02631578947368421,0.0006628662335940606,0.02631578947368421,38,1
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.015873015873015872,0.00026472674904963017,0.015873015873015872,63,1
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.018404907975460124,0.0002420601752439669,0.018404907975460124,163,3
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.04864864864864865,0.0007329638378499038,0.04864864864864865,185,9
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.18699186991869918,0.0033853634200677893,0.17886178861788618,123,22
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0043859649122807015,0.00011248948223341096,0.0043859649122807015,228,1
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.045454545454545456,0.0006571726668535908,0.045454545454545456,176,8
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.021164021164021163,0.00022511354991439525,0.015873015873015872,189,3
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,67,0
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,64,0
+NK cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,76,0
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0625,0.0011253150882247,0.0625,16,1
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,18,0
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,24,0
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.07692307692307693,0.0013124565248776156,0.07692307692307693,13,1
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.125,0.002851273950225158,0.125,24,3
+NKT cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,9,0
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.13333333333333333,0.00221919176484794,0.13333333333333333,15,2
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.25,0.007170911664456342,0.25,12,3
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,34.333333333333336,0.6459705236751333,0.08333333333333333,12,1
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.1111111111111111,0.0017165319189110335,0.1111111111111111,9,1
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.1,0.00173761946133797,0.1,10,1
+NKT cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.027777777777777776,0.0005572272372673584,0.027777777777777776,36,1
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.6,0.00847002210525362,0.6,5,3
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,3,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,1,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,5,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.25,0.005861664712778425,0.25,4,1
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,5,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,5,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,8,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,9,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,2,0
+NKT cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,4,0
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.016541353383458645,0.0005226363748765786,0.016541353383458645,665,11
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,268,0
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,336,0
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.16738197424892703,0.006339508761485692,0.07725321888412018,233,18
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.7003367003367004,0.02606928625642231,0.0707070707070707,297,21
+Neutrophils,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.005050505050505051,0.00011655908263339597,0.005050505050505051,198,1
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,3.1252653927813165,0.10727732587708845,0.3747346072186836,942,353
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,3.775831873905429,0.1352775272992831,0.287215411558669,571,164
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,1.7116564417177915,0.0656585736481538,0.3128834355828221,326,102
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,3.220703125,0.1063305765790853,0.240234375,512,123
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,1.420774647887324,0.04688569831115342,0.14788732394366197,1136,168
+Neutrophils,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,2.7882882882882885,0.07823704212884004,0.1036036036036036,222,23
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,2.266566265060241,0.08719219848081203,0.32831325301204817,664,218
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.22737306843267108,0.009807816611479723,0.03532008830022075,453,16
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.11444141689373297,0.004213910306400229,0.027247956403269755,367,10
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.4540229885057471,0.017349968809316583,0.08908045977011494,348,31
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.1488095238095238,0.006874227813532423,0.041666666666666664,168,7
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,1.125,0.05357408783440749,0.19270833333333334,192,37
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.13636363636363635,0.0041587672054828355,0.03977272727272727,176,7
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.319672131147541,0.011664952115558683,0.06830601092896176,366,25
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.40934065934065933,0.01665243347120152,0.07417582417582418,364,27
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,146,0
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,110,0
+Neutrophils,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,241,0
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.043478260869565216,0.0004043361003400435,0.043478260869565216,23,1
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,22,0
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,17,0
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.047619047619047616,0.00017501855196650477,0.047619047619047616,21,1
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.0,0.0,0.0,16,0
+Plasma cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,31,0
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.2,0.0025796822565020885,0.2,35,7
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.09090909090909091,0.0012798689414204,0.09090909090909091,11,1
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.34615384615384615,0.0019454571061070806,0.23076923076923078,26,6
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.043478260869565216,0.00010249230539016955,0.043478260869565216,23,1
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.10256410256410256,0.0006457949583416666,0.10256410256410256,39,4
+Plasma cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,73,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,3.5,0.019624043619214927,0.5,4,2
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,3,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,2,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,3,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,4,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,1,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,3,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,7,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,5,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,2,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,8,0
+Plasma cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,7,0
+Platelets,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,23,0
+Platelets,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,6,0
+Platelets,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,2,0
+Platelets,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,2,0
+Platelets,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,1,0
+Platelets,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,3,0
+Platelets,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,1,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.4444444444444444,0.03509247124318856,0.25925925925925924,54,14
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.02127659574468085,0.001286372173197149,0.02127659574468085,47,1
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,38,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,56,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.037037037037037035,0.003296236834040845,0.024691358024691357,81,2
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.14285714285714285,0.012192173017438936,0.14285714285714285,63,9
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,9,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.03571428571428571,0.004266939750810714,0.03571428571428571,28,1
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,12,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,24,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,23,0
+Platelets,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,18,0
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,34,0
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,17,0
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,52,0
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,30,0
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.047619047619047616,0.0011982649124068333,0.047619047619047616,21,1
+SmoothMuscle,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,31,0
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.03125,0.0003041066562864906,0.03125,32,1
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.23333333333333334,0.005843991966144227,0.23333333333333334,30,7
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.8536585365853658,0.010447824968605137,0.2682926829268293,41,11
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.47619047619047616,0.005194738132887754,0.13333333333333333,105,14
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,5.108108108108108,0.0488017613036613,0.10810810810810811,74,8
+SmoothMuscle,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,45,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.8793103448275862,0.009521049904860178,0.1724137931034483,116,20
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,46,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.037037037037037035,0.0007696807364305296,0.037037037037037035,27,1
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,14,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.02631578947368421,0.00019610842442569472,0.02631578947368421,38,1
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,13.444444444444445,0.19881182410320375,0.17777777777777778,45,8
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,10,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,14,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.07692307692307693,0.0011412919424788847,0.07692307692307693,13,1
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,35,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,28,0
+SmoothMuscle,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,30,0
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0049504950495049506,0.00010790093830655941,0.0049504950495049506,202,1
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,234,0
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,162,0
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.015873015873015872,0.00031329779973604765,0.015873015873015872,126,2
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.06493506493506493,0.0012247781431351235,0.05194805194805195,77,4
+Treml4+Macrophages,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,109,0
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.5967741935483871,0.011458388306097031,0.22580645161290322,62,14
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.22941176470588234,0.003922584217057678,0.17058823529411765,170,29
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.6767676767676768,0.014496097139951225,0.1717171717171717,99,17
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.38571428571428573,0.006161343423116557,0.17142857142857143,70,12
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.09090909090909091,0.0015164833806508753,0.07792207792207792,77,6
+Treml4+Macrophages,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.017391304347826087,0.0002914537871825331,0.017391304347826087,230,4
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.19444444444444445,0.0027314631368627346,0.1527777777777778,72,11
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.045454545454545456,0.0005786635111004622,0.045454545454545456,66,3
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.02564102564102564,0.00041940125286174106,0.02564102564102564,78,2
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.07407407407407407,0.0007664007011611378,0.02962962962962963,135,4
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.03418803418803419,0.00044458001641260085,0.03418803418803419,117,4
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.08333333333333333,0.001192225588402586,0.08333333333333333,72,6
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,109,0
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.02912621359223301,0.00043295255933406795,0.02912621359223301,103,3
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.012658227848101266,0.00016600954554886962,0.012658227848101266,79,1
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,63,0
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,106,0
+Treml4+Macrophages,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,58,0
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.01818181818181818,0.00046560353858689273,0.01818181818181818,55,1
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,30,0
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,41,0
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.027777777777777776,0.00037865018781049444,0.027777777777777776,36,1
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.03333333333333333,0.0005573204034999733,0.03333333333333333,30,1
+Vein,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,39,0
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,1.105263157894737,0.014646097098012784,0.18421052631578946,38,7
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.2765957446808511,0.003929410497211305,0.19148936170212766,47,9
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.34375,0.00655036525296703,0.140625,64,9
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.5,0.008462071561120122,0.1590909090909091,44,7
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.047619047619047616,0.0005939018161517524,0.047619047619047616,21,1
+Vein,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,30,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.19753086419753085,0.00834991086944674,0.18518518518518517,81,15
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,89,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.01818181818181818,0.0003931203931203927,0.01818181818181818,55,1
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.025,0.0004787437763309075,0.025,40,1
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.0625,0.0022760921299665375,0.0625,64,4
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.16666666666666666,0.006758536399288744,0.125,72,9
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,35,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0136986301369863,0.0005175153055151602,0.0136986301369863,73,1
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0,0.0,0.0,40,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,49,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,68,0
+Vein,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,65,0
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,135,0
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,163,0
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,196,0
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.08391608391608392,0.00219319821642793,0.02097902097902098,143,3
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.007407407407407408,4.983331935057815e-05,0.007407407407407408,270,2
+activated T cells,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,149,0
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,3.991228070175439,0.08719560637384323,0.11403508771929824,114,13
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.6775956284153005,0.010706761282022548,0.13114754098360656,183,24
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.47435897435897434,0.009180731287152554,0.20512820512820512,78,16
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.18811881188118812,0.003592238628019105,0.16831683168316833,101,17
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.09523809523809523,0.0012137436303751071,0.08333333333333333,84,7
+activated T cells,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.005434782608695652,1.298075525149402e-05,0.005434782608695652,184,1
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.18461538461538463,0.0034057101850924784,0.16923076923076924,65,11
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0136986301369863,0.00022467820464140275,0.0136986301369863,73,1
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,102,0
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.02197802197802198,0.0002666410042744835,0.02197802197802198,91,2
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.042735042735042736,0.00038328465335899745,0.03418803418803419,117,4
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.20512820512820512,0.002662759260970174,0.1794871794871795,78,14
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.003436426116838488,6.343780906107594e-05,0.003436426116838488,291,1
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.04054054054054054,0.00043657671436788515,0.037162162162162164,296,11
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.0103359173126615,8.865417671056176e-05,0.0103359173126615,387,4
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,81,0
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,79,0
+activated T cells,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,53,0
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.13333333333333333,0.0010404473923787201,0.06666666666666667,15,1
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,11,0
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,8,0
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,18,0
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.02857142857142857,0.00027498968788670285,0.02857142857142857,35,1
+cDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,22,0
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.25,0.0011667857429176801,0.2,20,4
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,11.73913043478261,0.07241772812643772,0.17391304347826086,23,4
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.6153846153846154,0.004520457502436246,0.38461538461538464,13,5
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.10810810810810811,0.0005817659681009379,0.10810810810810811,37,4
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.44,0.002248299017506392,0.28,25,7
+cDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.02040816326530612,0.0001979069362423,0.02040816326530612,49,1
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.4482758620689655,0.0034691010849198793,0.3103448275862069,29,9
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.1111111111111111,0.0007459624780873444,0.1111111111111111,9,1
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,20,0
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.02857142857142857,0.00018353843753728,0.02857142857142857,35,1
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.02702702702702703,0.0001841328997617297,0.02702702702702703,37,1
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.6428571428571429,0.004078034463102668,0.14285714285714285,28,4
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.018867924528301886,9.107020237620377e-05,0.018867924528301886,53,1
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.06976744186046512,0.00029817029989333255,0.046511627906976744,43,2
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.06756756756756757,0.0003577643611855608,0.02702702702702703,74,2
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,43,0
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,19,0
+cDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,25,0
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,1,0.0,0.0,0.0,14,0
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,2,0.0,0.0,0.0,12,0
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",2 dpi,3,0.0,0.0,0.0,27,0
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,1,0.0,0.0,0.0,4,0
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,2,0.06451612903225806,0.0007391585320014161,0.06451612903225806,31,2
+pDC,Roborovski hamster,1x10$^4$ pfu,"Roborovski hamster, 1x10$^4$ pfu",3 dpi,3,0.0,0.0,0.0,8,0
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,1,0.10638297872340426,0.0010485258013160383,0.0851063829787234,94,8
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,2,0.38596491228070173,0.004119369585159689,0.2807017543859649,57,16
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",2 dpi,3,0.13513513513513514,0.0018824438407724728,0.13513513513513514,37,5
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,1,0.125,0.0012996919455545188,0.125,32,4
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,2,0.0,0.0,0.0,25,0
+pDC,Roborovski hamster,1x10$^5$ pfu,"Roborovski hamster, 1x10$^5$ pfu",3 dpi,3,0.0,0.0,0.0,25,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,1,0.5454545454545454,0.005581173587850873,0.36363636363636365,11,4
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,2,0.0,0.0,0.0,5,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",2 dpi,3,0.0,0.0,0.0,10,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,1,0.0,0.0,0.0,19,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,2,0.07692307692307693,0.0007287142565657154,0.07692307692307693,13,1
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",3 dpi,3,0.42857142857142855,0.0035568073051869997,0.42857142857142855,7,3
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,1,0.0,0.0,0.0,77,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,2,0.0,0.0,0.0,26,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",5 dpi,3,0.06382978723404255,0.0005591759234406531,0.06382978723404255,47,3
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,1,0.0,0.0,0.0,8,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,2,0.0,0.0,0.0,10,0
+pDC,Syrian hamster,1x10$^5$ pfu,"Syrian hamster, 1x10$^5$ pfu",14 dpi,3,0.0,0.0,0.0,10,0

@@ -9,6 +9,7 @@ import seaborn as sns
 import gseapy as gp
 import statsmodels.api as sm
 import decoupler as dc
+import matplotlib.ticker as mtick
 
 from itertools import product
 from functools import wraps
@@ -19,6 +20,7 @@ from statsmodels.stats.multitest import multipletests
 from scipy.stats import ttest_ind, zscore
 from scipy.sparse import issparse
 from scipy.cluster.hierarchy import distance, linkage, dendrogram
+from sklearn.linear_model import LinearRegression
 
 dirname = os.path.dirname(__file__)
 root = Path(dirname+'/../')
@@ -841,3 +843,142 @@ def export_for_deseq(adata, keys, layer='counts', min_cells_per_group=1):
     return countData, colData
     # countData.to_csv(f'{path}/{name}_countData.csv')
     # colData.to_csv(f'{path}/{name}_colData.csv', index=False)
+
+
+def getExplanatoryPCs(adata, obs_keys=None, use_rep='X_pca', comp_str=None):
+    """Computes percentage of variance explained in PCA by variables in adata.obs.
+
+    Python port of scater R function https://rdrr.io/github/davismcc/scater/src/R/getExplanatoryPCs.R
+
+    returns a pandas.DataFrame where columns are PCs and rows are obs_keys
+    """
+    obs_keys = list(obs_keys) if isinstance(obs_keys, str) else obs_keys
+    variables = adata.obs if obs_keys==None else adata.obs[obs_keys]
+    if use_rep=='X_pca' and 'X_pca' not in adata.obsm.keys():
+        print(f'Could not find X_pca in adata.obsm. Running sc.pp.pca(adata)...')
+        sc.pp.pca(adata)
+    Y = adata.obsm[use_rep]
+
+    comp_str = 'PC' if 'pca' in use_rep else 'DC' if 'diffmap' in use_rep else use_rep.split('_')[-1]
+
+    # prepare output format
+    if 'diffmap' not in use_rep:
+        columns = [f'{comp_str}{i+1}' for i in np.arange(Y.shape[-1])]
+    else:
+        columns = ['triv'] + [f'{comp_str}{i+1}' for i in np.arange(Y.shape[-1]-1)]
+    rsquared_mat = pd.DataFrame(columns=columns, index=variables.columns)
+
+    for v in variables:
+        curvar = adata.obs[v]
+
+        if len(pd.unique(curvar))<=1:
+            print(f'Skipping {v} as it has less then 2 unique entries.')
+            continue
+
+        # Protect against NAs in the metadata.
+        keep = ~pd.isna(curvar)
+        curvar = curvar[keep]
+        y = Y[keep, :]
+
+        if pd.api.types.is_numeric_dtype(curvar):
+            X = curvar.values[:, np.newaxis]
+        else:
+            X = pd.get_dummies(curvar).values
+
+        regression = LinearRegression()
+        linear_model = regression.fit(X, y)
+        yhat = linear_model.predict(X)
+
+        tss = np.sum((y-np.mean(y, axis=0))**2, axis=0)  # total sum of squares
+        residuals = y - yhat
+        rss = np.sum(residuals**2, axis=0)  # residual sum of squares
+
+        r_squared = 1 - rss/tss  # classical R^2
+        adjustment_factor = (y.shape[0] - 1) / (y.shape[0] - X.shape[1] - 1)  # degrees of freedom of the estimates
+        r_squared_adj = 1 - (rss/tss) * adjustment_factor  # adjusted R^2 for multiple linear model
+        rsquared_mat.loc[v] = r_squared_adj * 100
+    return rsquared_mat
+
+def plotExplanatoryPCs(mat, keys=None, PCs=15, ax=None, cmap=None, show=True, **kwargs):
+    bars = np.min([len(mat.columns), PCs]) if PCs!=None else len(mat.columns)
+    keys = mat.index if keys is None else keys
+
+    ax = pl.subplots(1,1,figsize=[bars / 2, 4])[1] if ax==None else ax
+
+    if cmap==None and len(keys)<=10:
+        cmap = pl.get_cmap("tab10")
+    elif cmap==None and len(keys)>10:
+        cmap = pl.get_cmap("tab20")
+    else:
+        cmap = pl.get_cmap(cmap)
+
+    x = np.arange(bars)
+    width = 0.8 / len(keys)
+    for i, key in enumerate(keys):
+        ax.bar(x + width * i - 0.4 + width/2, mat.loc[key][:bars],
+               width=width, label=key, color=cmap(i), **kwargs)
+    ax.set_xticks(x)
+    ax.set_xticklabels(mat.columns[:bars], rotation=90)
+    ax.set_ylabel('Percent variance explained')
+    pl.grid()
+    ax.legend()
+    if show:
+        pl.show()
+    else:
+        return ax
+
+def plotExplanatoryPCs_heatmap(mat, N_components=6, ax=None, show=True, include_first=True, title='Latent Variable ANOVA', cmap='magma_r', linecolor='white', linewidths=4, dpi=100, **kwargs):
+    ax = pl.subplots(1,1, figsize=[N_components / 2, mat.shape[0]/2.5], dpi=dpi)[1] if ax==None else ax
+
+    idx = np.arange(1-int(include_first), N_components)
+    from matplotlib.ticker import PercentFormatter
+    sns.heatmap(mat.astype(float).iloc[:, idx], ax=ax, cbar_kws={'label': 'Percent Variation Explained'}, linecolor=linecolor, linewidths=linewidths, cmap=cmap)
+    cbar = ax.collections[0].colorbar
+    ax.set_title(title)
+    cbar.ax.yaxis.set_major_formatter(PercentFormatter(100, 0))
+    pl.xlabel('Diffusion Component')
+    pl.ylabel('Variable')
+    ax.tick_params(axis='x', rotation=90)
+    if show:
+        pl.show()
+    else:
+        return ax
+
+def getExplanatoryPCs_weighted(adata, obs_keys=None, use_rep='X_pca', normalize=False,
+                               sort=True, ascending=False, plot=False, show=True, style="whitegrid"):
+    mat = getExplanatoryPCs(adata, obs_keys=obs_keys, use_rep=use_rep)
+    # weighted sum, variation explained in data via PCA
+    weights = adata.uns['pca']['variance_ratio']
+    if normalize:
+        weights /= np.sum(weights)
+    y = np.dot(mat.values, weights)  # PC variance explained weighted sum
+    tab = pd.DataFrame(y, index=mat.index, columns=['weighted_score']).T
+    if sort:
+        tab = tab.sort_values(by='weighted_score', axis=1, ascending=ascending)
+    if plot:
+        with sns.axes_style(style):
+            ax = sns.barplot(data=tab)
+        pl.xticks(rotation=90)
+        pl.ylabel('% Variance Explained')
+        pl.grid(True)
+        ax.yaxis.set_major_formatter(mtick.PercentFormatter())
+        if show: pl.show()
+    return tab
+
+def getExplanatoryPCs_groups(adata, obs_key, plot=True, show=True, figsize=[12,6], use_rep='X_pca'):
+    tdata = adata.copy()
+    groups = list(np.sort(pd.unique(tdata.obs[obs_key])))
+    for group in groups:
+        tdata.obs[group] = [x==group for x in tdata.obs[obs_key]]
+    mat = getExplanatoryPCs(tdata, groups, use_rep=use_rep)
+
+    if plot:
+        pl.figure(figsize=figsize)
+        sns.heatmap(np.array(mat.values, dtype=float), robust=True, linewidth=0.1)
+        pl.yticks(np.arange(len(mat.index))+0.5, mat.index, rotation=0)
+        pl.xticks(np.arange(len(mat.columns))+0.5, mat.columns, rotation=90)
+        pl.ylabel(obs_key)
+        pl.xlabel('Diffusion component')
+        pl.title('Estimated % Variance explained')
+        if show: pl.show()
+    return mat
