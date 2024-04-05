@@ -21,10 +21,10 @@ dependencies:
   - pandas~=1.4 #1.4.3
   - pyyaml~=5.4 #5.4.1
   - conda-forge::mscorefonts # provides standard fonts for plotting
+  - conda-forge::leidenalg
   - pip:
      - scipy=1.9
      - louvain
-     - leiden
     #  - statannotations=0.4.4
     #  - "--editable=git+https://github.com/saezlab/decoupler-py"  # last used version: 1.1.0
     #  - "--editable=git+git://github.com/zqfang/gseapy.git#egg=gseapy"  # last used version: 0.10.8
