@@ -1,0 +1,106 @@
+sample_id,dataset,sample_type,severity,cell_count
+BIH-CoV-01_BL_1,Chua,BALF,critical,2706
+BIH-CoV-01_NS_1,Chua,Nasal Swap,critical,7931
+BIH-CoV-01_PB_1,Chua,Protected Specimen Brush,critical,1964
+BIH-CoV-02_NS_1,Chua,Nasal Swap,critical,451
+BIH-CoV-03_NS_1,Chua,Nasal Swap,critical,275
+BIH-CoV-04_BL_1,Chua,BALF,critical,4755
+BIH-CoV-04_NS_1,Chua,Nasal Swap,critical,2583
+BIH-CoV-04_PB_1,Chua,Protected Specimen Brush,critical,4620
+BIH-CoV-05_NS_1,Chua,Nasal Swap,critical,517
+BIH-CoV-06_NS_1,Chua,Nasal Swap,critical,2069
+BIH-CoV-06_NS_2,Chua,Nasal Swap,critical,4821
+BIH-CoV-07_NS_1,Chua,Nasal Swap,critical,2969
+BIH-CoV-07_NS_2,Chua,Nasal Swap,critical,2633
+BIH-CoV-08_NS_1,Chua,Nasal Swap,critical,359
+BIH-CoV-09_NS_1,Chua,Nasal Swap,critical,585
+BIH-CoV-10_NS_1,Chua,Nasal Swap,critical,2833
+BIH-CoV-11_NS_1,Chua,Nasal Swap,critical,1913
+BIH-CoV-12_NS_1,Chua,Nasal Swap,moderate,3148
+BIH-CoV-12_NS_2,Chua,Nasal Swap,moderate,1339
+BIH-CoV-12_NS_3,Chua,Nasal Swap,moderate,2257
+BIH-CoV-13_NS_1,Chua,Nasal Swap,moderate,591
+BIH-CoV-14_NS_1,Chua,Nasal Swap,moderate,843
+BIH-CoV-14_NS_2,Chua,Nasal Swap,moderate,2570
+BIH-CoV-15_NS_1,Chua,Nasal Swap,moderate,14024
+BIH-CoV-15_NS_2,Chua,Nasal Swap,moderate,4712
+BIH-CoV-15_NS_3,Chua,Nasal Swap,moderate,2957
+BIH-CoV-15_NS_4,Chua,Nasal Swap,moderate,5075
+BIH-CoV-16_NS_1,Chua,Nasal Swap,moderate,2271
+BIH-CoV-17_NS_1,Chua,Nasal Swap,moderate,4196
+BIH-CoV-18_NS_1,Chua,Nasal Swap,moderate,746
+BIH-CoV-19_NS_1,Chua,Nasal Swap,moderate,793
+BIH-Con-01_NS_1,Chua,Nasal Swap,control,1104
+BIH-Con-01_NS_2,Chua,Nasal Swap,control,531
+BIH-Con-01_NS_3,Chua,Nasal Swap,control,419
+BIH-Con-01_NS_4,Chua,Nasal Swap,control,468
+BIH-Con-01_NS_5,Chua,Nasal Swap,control,512
+pr_D0_Z1_L,Dwarfhamster,,,2351
+pr_D0_Z2_L,Dwarfhamster,,,2448
+pr_D0_Z3_L,Dwarfhamster,,,1785
+pr_hd_D2_Z1_L,Dwarfhamster,,,2879
+pr_hd_D2_Z2_L,Dwarfhamster,,,2724
+pr_hd_D2_Z3_L,Dwarfhamster,,,2317
+pr_hd_D3_Z1_L,Dwarfhamster,,,3052
+pr_hd_D3_Z2_L,Dwarfhamster,,,2895
+pr_hd_D3_Z3_L,Dwarfhamster,,,3293
+pr_ld_D2_Z1_L,Dwarfhamster,,,3004
+pr_ld_D2_Z2_L,Dwarfhamster,,,2460
+pr_ld_D2_Z3_L,Dwarfhamster,,,2807
+pr_ld_D3_Z1_L,Dwarfhamster,,,2773
+pr_ld_D3_Z2_L,Dwarfhamster,,,2442
+pr_ld_D3_Z3_L,Dwarfhamster,,,2511
+ma_d0_lung_1,Goldhamster,,,2490
+ma_d0_lung_2,Goldhamster,,,2663
+ma_d0_lung_3,Goldhamster,,,3261
+ma_d2_lung_1,Goldhamster,,,2860
+ma_d2_lung_2,Goldhamster,,,2709
+ma_d2_lung_3,Goldhamster,,,3137
+ma_d3_lung_1,Goldhamster,,,2817
+ma_d3_lung_2,Goldhamster,,,3049
+ma_d3_lung_3,Goldhamster,,,2818
+ma_d5_lung_1,Goldhamster,,,2679
+ma_d5_lung_2,Goldhamster,,,3130
+ma_d5_lung_3,Goldhamster,,,3226
+ma_e14_lung_1,Goldhamster,,,2435
+ma_e14_lung_2,Goldhamster,,,2725
+ma_e14_lung_3,Goldhamster,,,2791
+C100,Liao,BALF,control,5164
+C141,Liao,BALF,mild,3527
+C142,Liao,BALF,mild,3426
+C143,Liao,BALF,severe,17939
+C144,Liao,BALF,mild,585
+C145,Liao,BALF,severe,12431
+C146,Liao,BALF,severe,1538
+C148,Liao,BALF,severe,1965
+C149,Liao,BALF,severe,2140
+C152,Liao,BALF,severe,4585
+C51,Liao,BALF,control,8764
+C52,Liao,BALF,control,8501
+C51ctr,Melms,tissue,control,6098
+C52ctr,Melms,tissue,control,4513
+C53ctr,Melms,tissue,control,7120
+C54ctr,Melms,tissue,control,4382
+C55ctr,Melms,tissue,control,5685
+C56ctr,Melms,tissue,control,4090
+C57ctr,Melms,tissue,control,4789
+L01cov,Melms,tissue,critical,3060
+L03cov,Melms,tissue,critical,5060
+L04cov,Melms,tissue,critical,3630
+L04covaddon,Melms,tissue,critical,4574
+L05cov,Melms,tissue,critical,3052
+L06cov,Melms,tissue,critical,7582
+L07cov,Melms,tissue,critical,5074
+L08cov,Melms,tissue,critical,4149
+L09cov,Melms,tissue,critical,3605
+L10cov,Melms,tissue,critical,1550
+L11cov,Melms,tissue,critical,3296
+L12cov,Melms,tissue,critical,3876
+L13cov,Melms,tissue,critical,4862
+L15cov,Melms,tissue,critical,4056
+L16cov,Melms,tissue,critical,1822
+L17cov,Melms,tissue,critical,4651
+L18cov,Melms,tissue,critical,2816
+L19cov,Melms,tissue,critical,2509
+L21cov,Melms,tissue,critical,3425
+L22cov,Melms,tissue,critical,6987
