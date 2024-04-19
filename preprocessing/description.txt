@@ -1,0 +1,21 @@
+Description Syrian hamster lung object processing
+
+Step 1 – cellranger
+
+Cellranger (10x Genomics) was run using the raw sequencing data (fastq files) from Nouailles et al. (2021) and the MesAurJ_rev3_ext_S2 reference using standard settings.
+
+Step 2 – merging of cellranger output and doublet detection
+
+In script ma_scRNAseq_timecourse_merging.R, the cellranger output folders are converted to Seurat objects and merged. A very low depth per cell thresholds is uwed when reading in the data in order to preserve cells with low RNA content such as neutrophils. Doublets are identified using the DoubletFinder package, and written to a text file.
+
+Step 3 - initial annotation of cell types and cell type-specific thresholdings
+
+In script ma_scRNAseq_timecourse_part1.R, there is a cell type annotation of the cells with the low threshold. Subsequently, cell type-specific tresholds are calculated and written to a text file ma_lung_cells_to_keep.txt. This means that e.g. for neutrophils the threshold is much lower as for macrophages.
+
+Step 4 – filter Seurat objects and integrate
+
+In script ma_scRNAseq_timecourse_part2.R using the ma_lung_cells_to_keep.txt file from the previous step, cells below the threshold are filtered out (cellranger input is read in again). Subsequently, samples are integrated using the standard sctransform procedure. Note: this step needs a lot of memory.
+
+Step 5 – annotate cell types on integrated object again
+
+In script ma_scRNAseq_timecourse_part3.R, the integrated object is read in and annotated again, and the annotated object saved as seu_lung_new_combined_integrated_annotated.rds
